@@ -6,10 +6,23 @@ import Link from '@mui/material/Link'
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import IconButton from '@mui/material/IconButton/IconButton';
 import Badge from '@mui/material/Badge/Badge';
+import { useSelector } from 'react-redux';
+import { RootState } from '../store';
+import { useState } from 'react';
 
 const Navbar = () => {
+    const cart = useSelector((state: RootState) => state.cart);
+
+    //sticky navbar
+    const [scroll, setScroll] = useState(false)
+    window.addEventListener('scroll', () => {
+        window.scrollY > 300 ? setScroll(true) : setScroll(false)
+    })
+
     return (
-        <AppBar position="static">
+        <AppBar position={scroll ? 'sticky' : 'static'} sx={{
+            borderBottom: "1px solid rgba(255,255,255, .1)",
+        }}>
             <Toolbar>
                 <Box sx={{
                     flexGrow: 1,
@@ -67,11 +80,11 @@ const Navbar = () => {
                         </Badge>
                     </IconButton>
 
-                    <IconButton>  
-                        <Badge badgeContent={0} color="secondary" max={10}>
+                    <IconButton>
+                        <Badge badgeContent={cart.cart.length > 0 ? cart.cart.length : 0} color="secondary" max={10}>
                             <ShoppingBagOutlinedIcon sx={{
-                            fontSize: 40,
-                            color: "#fff"
+                                fontSize: 40,
+                                color: "#fff"
                             }} />
                         </Badge>
                     </IconButton>

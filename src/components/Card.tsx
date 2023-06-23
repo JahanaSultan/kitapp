@@ -9,30 +9,28 @@ import { Box } from '@mui/system';
 import Button from '@mui/material/Button';
 import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
 import Rating from '@mui/material/Rating';
+import { Data } from './Featured'
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../features/cartSlice';
+import { RootState } from '../store';
+import { useSelector } from 'react-redux';
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import { removeFromCart } from '../features/cartSlice';
 
+const Card1: FC<Data> = ({ id, title, author, price, image, genre, raiting }) => {
 
-
-interface Data {
-  id: number,
-  title: string,
-  author: string,
-  price: number,
-  image: string,
-  page: number,
-  genre: string,
-  raiting: number,
-}
-
-
-const Card1: FC<Data> = ({ id, title, author, price, image, page, genre, raiting }) => {
-
-  const [value, setValue] = React.useState<number | null>(2);
+  // const [value, setValue] = React.useState<number | null>(2);
 
   // youtube modal 
 
+  const dispatch = useDispatch();
+  const cart = useSelector((state: RootState) => state.cart);
+  console.log(cart)
   const addToCartHandler = () => {
-    addToCart(id, title, author, price, image, page, genre, raiting);
-    
+    dispatch(addToCart({ id, title, author, price, image, genre, raiting }));
+  }
+  const removeFromCartHandler = () => {
+    dispatch(removeFromCart(id));
   }
 
   return (
@@ -113,15 +111,35 @@ const Card1: FC<Data> = ({ id, title, author, price, image, page, genre, raiting
           <Rating
             name="simple-controlled"
             value={raiting}
+            size={"small"}
             onChange={(event, newValue) => {
-              setValue(newValue);
+              // setValue(newValue);
             }}
             sx={{
               mb: "10px",
+              '.MuiRating-iconEmpty svg': {
+                fill: "#ffffff4b",
+              }
             }}
           />
         </Box>
-        <Button
+        {cart.cart.find((book) => book.id === id) ? (
+          <Button
+          onClick={removeFromCartHandler}
+          sx={{
+            border: "1px solid #fc6a03",
+            borderRadius: "100vmax",
+            height: "40px",
+            color: "#fc6a03",
+            "&:hover": {
+              backgroundColor: "#fc6a03",
+              color: "#fff",
+            },
+          }}>
+          Remove from cart <DeleteOutlineOutlinedIcon sx={{ ml: "5px", fontSize: 16 }} />
+        </Button>
+        ) : (
+          <Button
           onClick={addToCartHandler}
           sx={{
             border: "1px solid #fc6a03",
@@ -135,6 +153,8 @@ const Card1: FC<Data> = ({ id, title, author, price, image, page, genre, raiting
           }}>
           Add to cart <AddShoppingCartOutlinedIcon sx={{ ml: "5px", fontSize: 16 }} />
         </Button>
+        )}
+
       </CardContent>
 
     </Card>

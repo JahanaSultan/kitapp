@@ -2,11 +2,13 @@ import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 import { TypedUseSelectorHook, useSelector } from 'react-redux';
 import {modalSlice} from '../features/modalSlice';
+import {cartSlice} from '../features/cartSlice';
 
 
 const store = configureStore({
     reducer: {
         modal: modalSlice.reducer,
+        cart: cartSlice.reducer,
     }
 });
 

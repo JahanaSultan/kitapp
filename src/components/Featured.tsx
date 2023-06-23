@@ -1,18 +1,17 @@
 import { Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import Card1 from "./Card";
+export interface Data {
+    id: number,
+    title: string,
+    author: string,
+    price: number,
+    image: string,
+    genre: string,
+    raiting: number,
+}
 
 const Featured = () => {
-    interface Data {
-        id: number,
-        title: string,
-        author: string,
-        price: number,
-        image: string,
-        page: number,
-        genre: string,
-        raiting: number,
-    }
 
     const [data, setData] = useState([]);
 
@@ -66,7 +65,7 @@ const Featured = () => {
                     flexWrap: "wrap",
                 }}
             >
-                {data.slice(0,10).map((item: Data) => (
+                {data.slice(0, 10).map((item: Data) => (
                     <Card1
                         key={item.id}
                         id={item.id}
@@ -74,7 +73,6 @@ const Featured = () => {
                         author={item.author}
                         price={item.price}
                         image={item.image}
-                        page={item.page}
                         genre={item.genre}
                         raiting={item.raiting}
                     />

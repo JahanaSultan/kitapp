@@ -4,7 +4,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import header from '../assets/img/header.webp'
 import Modal from './Modal';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { modalOpen } from '../features/modalSlice';
 
 const Header = () => {
