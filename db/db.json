@@ -1,0 +1,110 @@
+{
+    "kitab":[
+        {
+            "id" : 1,
+            "title" : "İqlimlər",
+            "author" : "Andre Morua",
+            "price" : 12.50,
+            "image": "https://www.qanun.az/images/news/compressed/2022-08-18-16-30-361660825836.jpg",
+            "genre" : "Roman",
+            "page": 208,
+            "raiting": 3
+        },
+        {
+            "id":2,
+            "title" : "Don Kixot",
+            "author" : "Miqel de Servantes",
+            "price" : 10.50,
+            "image": "https://www.qanun.az/images/news/compressed/2021-12-03-10-05-041638511504.jpg",
+            "genre" : "Roman",
+            "page": 840,
+            "raiting": 4
+        },
+        {
+            "id":3,
+            "title": "Dirilmə",
+            "author": "Lev Tolstoy",
+            "price": 15.50,
+            "image": "https://www.qanun.az/images/news/compressed/2022-01-05-09-33-381641360818.png",
+            "genre": "Roman",
+            "page": 496,
+            "raiting": 2.7
+        },
+        {
+            "id":4,
+            "title": "Qara kitab",
+            "author": "Orhan Pamuk",
+            "price": 12.50,
+            "image": "https://www.qanun.az/images/news/compressed/2021-09-02-11-24-421630567482.jpg",
+            "genre": "Roman",
+            "page": 496,
+            "raiting": 4.5
+        
+        },
+        {
+            "id":5,
+            "title": "Iki şəhərin hekayəsi",
+            "author": "Çarlz Dikkens",
+            "price": 12.50,
+            "image": "https://www.qanun.az/images/news/compressed/185x295/2021-09-15-09-44-201631684660.jpg?v=1",
+            "genre": "Roman",
+            "page": 496,
+            "raiting": 2.8
+        },
+        {
+            "id":6,
+            "title": "Çovdarlıqda uçurumdan qoruyan",
+            "author": "Jerom De Selinjer",
+            "price": 12.50,
+            "image": "https://www.qanun.az/images/news/compressed/185x295/2021-09-15-10-19-431631686783.jpg?v=1",
+            "genre": "Roman",
+            "page": 496,
+            "raiting": 4.2
+        
+        },
+        {
+            "id":7,
+            "title": "Gün var əsrə bədəl",
+            "author": "Ernest Heminqvey",
+            "price": 14.50,
+            "image": "https://www.qanun.az/images/news/compressed/185x295/2021-09-16-11-30-201631777420.jpg?v=1",
+            "genre": "Roman",
+            "page": 496,
+            "raiting": 3.9
+
+        },
+        {
+            "id":8,
+            "title": "Varlıq və heçlik",
+            "author": "Jan Paul Sartre",
+            "price": 12.50,
+            "image": "https://www.qanun.az/images/news/compressed/185x295/2022-05-31-10-11-471653977507.jpg?v=1",
+            "genre": "Roman",
+            "page": 496,
+            "raiting": 4.1
+
+        },
+        {
+            "id":9,
+            "title": "Kulak Arxipelaqı",
+            "author": "Aleksandr Soljenitsin",
+            "price": 17.50,
+            "image": "https://www.qanun.az/images/news/compressed/200xskip/2021-09-16-12-15-571631780157.jpg?v=1",
+            "genre": "Roman",
+            "page": 320,
+            "raiting": 5
+
+        },
+        {
+            "id":10,
+            "title": "Uşaqlığım",
+            "author": "Maksim Gorki",
+            "price": 12.50,
+            "image": "https://www.qanun.az/images/news/compressed/185x295/2021-09-16-14-27-461631788066.jpg?v=1",
+            "genre": "Roman",
+            "page": 85,
+            "raiting": 4.5
+        }
+
+    ]
+}

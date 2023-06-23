@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Comfortaa Regular';
+  src: url('../fonts/Comfortaa-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Comfortaa Bold';
+  src: url('../fonts/Comfortaa-Bold.ttf');
+}
+
+@font-face {
+  font-family: "DMSerif";
+  src: url('../fonts/DMSerifDisplay-Regular.ttf');
+}
+
+body {
+  font-family: 'Comfortaa Regular';
+  background-color: #00001d;
+}
+
+
+@keyframes pulse {
+  0% {
+    box-shadow: #fc6a03 0 0 0 0;
+  }
+
+  75% {
+    box-shadow: #fc6b030c 0 0 0 16px;
+  }
+}
