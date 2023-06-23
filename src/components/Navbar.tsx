@@ -9,7 +9,7 @@ import Badge from '@mui/material/Badge/Badge';
 import { useSelector } from 'react-redux';
 import { RootState } from '../store';
 import { useState } from 'react';
-
+ 
 const Navbar = () => {
     const cart = useSelector((state: RootState) => state.cart);
 

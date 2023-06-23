@@ -9,6 +9,7 @@ const store = configureStore({
     reducer: {
         modal: modalSlice.reducer,
         cart: cartSlice.reducer,
+        wishlist: cartSlice.reducer,
     }
 });
 

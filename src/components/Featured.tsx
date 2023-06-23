@@ -1,6 +1,7 @@
-import { Box, Typography } from "@mui/material";
+import { Box} from "@mui/material";
 import { useEffect, useState } from "react";
 import Card1 from "./Card";
+import Heading from "./Heading";
 export interface Data {
     id: number,
     title: string,
@@ -30,32 +31,7 @@ const Featured = () => {
                 paddingX: "24px",
             }}
         >
-            <Typography
-                variant="h4"
-                sx={{
-                    textAlign: "center",
-                    color: "#fc6a03",
-                    mt: "50px",
-                    fontWeight: "bold",
-                    fontFamily: "DMSerif",
-                }}
-            >
-                Featured Collections
-            </Typography>
-
-            <Typography
-                variant="h6"
-                sx={{
-                    textAlign: "center",
-                    color: "rgba(255,255,255, .5)",
-                    mt: "10px",
-                    fontFamily: "Comfortaa Bold",
-                }}
-            >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                <br />
-                Quos blanditiis tenetur
-            </Typography>
+            <Heading h1={'Featured Collections'} text={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos blanditiis tenetur'} />
 
             <Box
                 sx={{

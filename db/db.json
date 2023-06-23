@@ -1,27 +1,27 @@
 {
-    "kitab":[
+    "kitab": [
         {
-            "id" : 1,
-            "title" : "İqlimlər",
-            "author" : "Andre Morua",
-            "price" : 12.50,
+            "id": 1,
+            "title": "İqlimlər",
+            "author": "Andre Morua",
+            "price": 12.50,
             "image": "https://www.qanun.az/images/news/compressed/2022-08-18-16-30-361660825836.jpg",
-            "genre" : "Roman",
+            "genre": "Roman",
             "page": 208,
             "raiting": 3
         },
         {
-            "id":2,
-            "title" : "Don Kixot",
-            "author" : "Miqel de Servantes",
-            "price" : 10.50,
+            "id": 2,
+            "title": "Don Kixot",
+            "author": "Miqel de Servantes",
+            "price": 10.50,
             "image": "https://www.qanun.az/images/news/compressed/2021-12-03-10-05-041638511504.jpg",
-            "genre" : "Roman",
+            "genre": "Roman",
             "page": 840,
             "raiting": 4
         },
         {
-            "id":3,
+            "id": 3,
             "title": "Dirilmə",
             "author": "Lev Tolstoy",
             "price": 15.50,
@@ -31,7 +31,7 @@
             "raiting": 2.7
         },
         {
-            "id":4,
+            "id": 4,
             "title": "Qara kitab",
             "author": "Orhan Pamuk",
             "price": 12.50,
@@ -39,10 +39,9 @@
             "genre": "Roman",
             "page": 496,
             "raiting": 4.5
-        
         },
         {
-            "id":5,
+            "id": 5,
             "title": "Iki şəhərin hekayəsi",
             "author": "Çarlz Dikkens",
             "price": 12.50,
@@ -52,7 +51,7 @@
             "raiting": 2.8
         },
         {
-            "id":6,
+            "id": 6,
             "title": "Çovdarlıqda uçurumdan qoruyan",
             "author": "Jerom De Selinjer",
             "price": 12.50,
@@ -60,10 +59,9 @@
             "genre": "Roman",
             "page": 496,
             "raiting": 4.2
-        
         },
         {
-            "id":7,
+            "id": 7,
             "title": "Gün var əsrə bədəl",
             "author": "Ernest Heminqvey",
             "price": 14.50,
@@ -71,10 +69,9 @@
             "genre": "Roman",
             "page": 496,
             "raiting": 3.9
-
         },
         {
-            "id":8,
+            "id": 8,
             "title": "Varlıq və heçlik",
             "author": "Jan Paul Sartre",
             "price": 12.50,
@@ -82,10 +79,9 @@
             "genre": "Roman",
             "page": 496,
             "raiting": 4.1
-
         },
         {
-            "id":9,
+            "id": 9,
             "title": "Kulak Arxipelaqı",
             "author": "Aleksandr Soljenitsin",
             "price": 17.50,
@@ -93,10 +89,9 @@
             "genre": "Roman",
             "page": 320,
             "raiting": 5
-
         },
         {
-            "id":10,
+            "id": 10,
             "title": "Uşaqlığım",
             "author": "Maksim Gorki",
             "price": 12.50,
@@ -105,6 +100,67 @@
             "page": 85,
             "raiting": 4.5
         }
-
+    ],
+    "authors": [
+        {
+            "id": 1,
+            "name": "Gabriel Garcia Marquez",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Gabriel_Garcia_Marquez.jpg",
+            "about": "Gabriel José de la Concordia García Márquez was a Colombian novelist, short-story writer, screenwriter, and journalist. His works have earned him the title of one of the greatest writers of the 20th century and some have been labeled as magical realist, due to the supernatural and surrealistic elements of some of his fiction. Some of his works are set in a fictional village called Macondo, and most of them express the theme of solitude."
+        },
+        {
+            "id": 2,
+            "name": "Miguel de Servantes",
+            "image": "https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcSmJVgJXBx_Gz5UItT2moGV-oFzcf0OtpFibXUgzFqA0dJk0JIr_IDj1gNIG7yuHPIu",
+            "about": "Miguel de Cervantes Saavedra was a Spanish writer widely regarded as the greatest writer in the Spanish language, and one of the world's pre-eminent novelists. He is best known for his novel Don Quixote, a work often cited as both the first modern novel and one of the pinnacles of world literature."
+        },
+        {
+            "id": 3,
+            "name": "Lev Tolstoy",
+            "image": "https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSpIL-txJKXv2MwaohjiyPypzDNTYykyxa-SdIYWAtMAVj0LIpAZUO2PWa8Jw4sys6l",
+            "about": "Lev Nikolayevich Tolstoy was a Russian writer who is regarded as one of the greatest authors of all time. He received multiple nominations for the Nobel Prize in Literature every year from 1902 to 1906 and nominations for Nobel Peace Prize in 1901, 1902, and 1910, and his miss of the prize is a major Nobel prize controversy."
+        },
+        {
+            "id": 4,
+            "name": "Orhan Pamuk",
+            "image": "https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcRsOBkXb6lyiYAKD4w_TAQz0iSBuCV_ilEtFehI_X_vynWorZbky3kfndh8kwXUIHHw",
+            "about": "Ferit Orhan Pamuk is a Turkish novelist, screenwriter, academic and recipient of the 2006 Nobel Prize in Literature. One of Turkey's most prominent novelists, his work has sold over thirteen million books in sixty-three languages, making him the country's best-selling writer."
+        },
+        {
+            "id": 5,
+            "name": "Charles Dickens",
+            "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTisAirxMLv15Q1Ho_y0RsniPu7oWFKK8p72yV2Pp0BMJ6mjR3t",
+            "about": "Charles John Huffam Dickens FRSA was an English writer and social critic. He created some of the world's best-known fictional characters and is regarded by many as the greatest novelist of the Victorian era. His works enjoyed unprecedented popularity during his lifetime, and by the 20th century, critics and scholars had recognised him as a literary genius. His novels and short stories are still widely read today."
+        },
+        {
+            "id": 6,
+            "name": "Jerome David Salinger",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/J._D._Salinger_%28Catcher_in_the_Rye_portrait%29.jpg/220px-J._D._Salinger_%28Catcher_in_the_Rye_portrait%29.jpg",
+            "about": "Jerome David Salinger was an American writer best known for his 1951 novel The Catcher in the Rye. Salinger published several short stories in Story magazine in the early 1940s before serving in World War II. In 1948, his critically acclaimed story \"A Perfect Day for Bananafish\" appeared in The New Yorker, which became home to much of his later work. In 1951, his novel The Catcher in the Rye was a popular success. His depiction of adolescent alienation and loss of innocence in the protagonist Holden Caulfield was influential, especially among adolescent readers. The novel remains widely read and controversial, selling around 250,000 copies a year. The success of The Catcher in the Rye led to public attention and scrutiny. Salinger became reclusive, publishing new work less frequently. He followed Catcher with a short story collection, Nine Stories (1953), a collection of a novella and a short story, Franny and Zooey (1961), and a collection of two novellas, Raise High the Roof Beam, Carpenters and Seymour: An Introduction (1963). His last published work, a novella entitled \"Hapworth 16, 1924\", appeared in The New Yorker on June 19, 1965. Afterward, Salinger struggled with unwanted attention, including a legal battle in the 1980s with biographer Ian Hamilton and the release in the late 1990s of memoirs written by two people close to him: Joyce Maynard, an ex-lover; and Margaret Salinger, his daughter. In 1996, a small publisher announced a deal with Salinger to publish \"Hapworth 16, 1924\" in book form, but amid the ensuing publicity, the release was indefinitely delayed. He made headlines around the globe in June 2009, after filing a lawsuit against another writer for copyright infringement resulting from that writer's use of one of Salinger's characters from The Catcher in the Rye. Salinger died of natural causes on January 27, 2010, at his home in Cornish, New Hampshire."
+        },
+        {
+            "id": 7,
+            "name": "Ernest Hemingway",
+            "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1CGnZ20sa5AgcQuFfRClCkLn_99sBMWHFwPYtL-dZxOOo8nfm",
+            "about":"Ernest Miller Hemingway was an American novelist, short-story writer, journalist, and sportsman. His economical and understated style—which he termed the iceberg theory—had a strong influence on 20th-century fiction, while his adventurous lifestyle and his public image brought him admiration from later generations. Hemingway produced most of his work between the mid-1920s and the mid-1950s, and he won the Nobel Prize in Literature in 1954. He published seven novels, six short-story collections, and two nonfiction works. Three of his novels, four short-story collections, and three nonfiction works were published posthumously. Many of his works are considered classics of American literature."
+        },
+        {
+            "id": 8,
+            "name": "Jean-Paul Sartre",
+            "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTSd1_8Y-ZLO3Nb6ofpj3oBXGe3nW60rNKhBPGuepyTPWSCiXtM",
+            "about": "Jean-Paul Charles Aymard Sartre was a French philosopher, playwright, novelist, screenwriter, political activist, biographer, and literary critic. He was one of the key figures in the philosophy of existentialism and phenomenology, and one of the leading figures in 20th-century French philosophy and Marxism."
+        },
+        {
+            "id": 9,
+            "name": "Aleksandr Soljenitsin",
+            "image": "https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcRbg_VJhlby-ItKSv4cV3A85IsbW6EzOGTbTZ249OMKAi_JxaHOUVOecTUhP6zAfxR8",
+            "about": "Aleksandr Isayevich Solzhenitsyn was a Russian novelist, philosopher, historian, short story writer and political prisoner. Solzhenitsyn was an outspoken critic of the Soviet Union and Communism and helped to raise global awareness of its Gulag forced labor camp system. After serving in the Soviet Army during World War II, he was sentenced to spend eight years in a labor camp and then internal exile for criticizing Joseph Stalin in a private letter. His sentence was commuted after he was diagnosed with a tumor and he was allowed to serve his exile in Kazakhstan. Solzhenitsyn moved to Switzerland and then the United States in 1976. He was awarded the 1970 Nobel Prize in Literature \"for the ethical force with which he has pursued the indispensable traditions of Russian literature\". Solzhenitsyn was afraid to go to Stockholm to receive his award for fear that he would not be allowed to reenter. He was eventually expelled from the Soviet Union in 1974, but returned to Russia in 1994 after the dissolution of the Soviet Union."
+        },
+        {
+            "id": 10,
+            "name": "Maksim Gorki",
+            "image": "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcSHya3pTTmOiIjAsUMGeXpawzdC1sNiuvI3fDq2hgwZWBUno4TYKY996O_DnMUZrC7a",
+            "about":"Alexei Maximovich Peshkov (Russian: Алексе́й Макси́мович Пешко́в; 28 March [O.S. 16 March] 1868 – 18 June 1936), popularly known as Maxim Gorky (Russian: Макси́м Го́рький), was a Russian writer and socialist political thinker and proponent. He was nominated five times for the Nobel Prize in Literature. Before his success as an author, he travelled widely across the Russian Empire changing jobs frequently, experiences which would later influence his writing."
+        }
     ]
 }
