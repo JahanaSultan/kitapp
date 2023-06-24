@@ -36,6 +36,7 @@ const Card1: FC<Data> = ({ id, title, author, price, image, genre, raiting }) =>
   return (
     <Card sx={{
       width: "19%",
+      mb: "10px",
       position: "relative",
       bgcolor: "#00001a",
       border: "1px solid rgba(255,255,255, .2)",
@@ -46,7 +47,6 @@ const Card1: FC<Data> = ({ id, title, author, price, image, genre, raiting }) =>
       },
       '&:hover .MuiCardMedia-root': {
         transform: "perspective(1000px) rotateY(0deg)",
-        boxShadow: "0 0 10px rgba(0,0,0,0.5)",
       },
     }}>
       <Box sx={{
@@ -85,7 +85,7 @@ const Card1: FC<Data> = ({ id, title, author, price, image, genre, raiting }) =>
         alt={title}
         sx={{
           width: "100%",
-          height: "300px",
+          height: "200px",
           objectFit: "contain",
           transition: "0.5s",
           transform: "perspective(1000px) rotateY(30deg)",
@@ -128,8 +128,9 @@ const Card1: FC<Data> = ({ id, title, author, price, image, genre, raiting }) =>
           sx={{
             border: "1px solid #fc6a03",
             borderRadius: "100vmax",
-            height: "40px",
+            height: "30px",
             color: "#fc6a03",
+            fontSize: "12px",
             "&:hover": {
               backgroundColor: "#fc6a03",
               color: "#fff",
@@ -143,8 +144,9 @@ const Card1: FC<Data> = ({ id, title, author, price, image, genre, raiting }) =>
           sx={{
             border: "1px solid #fc6a03",
             borderRadius: "100vmax",
-            height: "40px",
+            height: "30px",
             color: "#fc6a03",
+            fontSize: "12px",
             "&:hover": {
               backgroundColor: "#fc6a03",
               color: "#fff",
