@@ -33,12 +33,10 @@ const Authors = () => {
       <Splide
         hasTrack={false}
         options={{
-          type: "loop",
+          // type: "loop",
           perPage: 5,
           focus: "center",
           gap: "5px",
-          autoplay: true,
-          interval: 3000,
           pauseOnHover: true,
           pagination: false,
         }}

@@ -142,7 +142,7 @@
             "id": 7,
             "name": "Ernest Hemingway",
             "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT1CGnZ20sa5AgcQuFfRClCkLn_99sBMWHFwPYtL-dZxOOo8nfm",
-            "about":"Ernest Miller Hemingway was an American novelist, short-story writer, journalist, and sportsman. His economical and understated style—which he termed the iceberg theory—had a strong influence on 20th-century fiction, while his adventurous lifestyle and his public image brought him admiration from later generations. Hemingway produced most of his work between the mid-1920s and the mid-1950s, and he won the Nobel Prize in Literature in 1954. He published seven novels, six short-story collections, and two nonfiction works. Three of his novels, four short-story collections, and three nonfiction works were published posthumously. Many of his works are considered classics of American literature."
+            "about": "Ernest Miller Hemingway was an American novelist, short-story writer, journalist, and sportsman. His economical and understated style—which he termed the iceberg theory—had a strong influence on 20th-century fiction, while his adventurous lifestyle and his public image brought him admiration from later generations. Hemingway produced most of his work between the mid-1920s and the mid-1950s, and he won the Nobel Prize in Literature in 1954. He published seven novels, six short-story collections, and two nonfiction works. Three of his novels, four short-story collections, and three nonfiction works were published posthumously. Many of his works are considered classics of American literature."
         },
         {
             "id": 8,
@@ -160,7 +160,111 @@
             "id": 10,
             "name": "Maksim Gorki",
             "image": "https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcSHya3pTTmOiIjAsUMGeXpawzdC1sNiuvI3fDq2hgwZWBUno4TYKY996O_DnMUZrC7a",
-            "about":"Alexei Maximovich Peshkov (Russian: Алексе́й Макси́мович Пешко́в; 28 March [O.S. 16 March] 1868 – 18 June 1936), popularly known as Maxim Gorky (Russian: Макси́м Го́рький), was a Russian writer and socialist political thinker and proponent. He was nominated five times for the Nobel Prize in Literature. Before his success as an author, he travelled widely across the Russian Empire changing jobs frequently, experiences which would later influence his writing."
+            "about": "Alexei Maximovich Peshkov (Russian: Алексе́й Макси́мович Пешко́в; 28 March [O.S. 16 March] 1868 – 18 June 1936), popularly known as Maxim Gorky (Russian: Макси́м Го́рький), was a Russian writer and socialist political thinker and proponent. He was nominated five times for the Nobel Prize in Literature. Before his success as an author, he travelled widely across the Russian Empire changing jobs frequently, experiences which would later influence his writing."
+        }
+    ],
+    "rentbook": [
+        {
+            "id": 1,
+            "name": "451 Fahrenheit",
+            "author": "Ray Bradbury",
+            "image": "https://www.qanun.az/images/news/compressed/170x267/2022-12-27-13-08-541672132134.png?v=1"
+        },
+        {
+            "id": 2,
+            "name": "Şahmat",
+            "author": "Stefan Zweig",
+            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-12-27-13-15-501672132550.png?v=1"
+        },
+        {
+            "id": 3,
+            "name": "Siçanlar və adamlar",
+            "author": "John Steinbeck",
+            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-11-16-15-27-181668598038.jpg?v=1"
+        },
+        {
+            "id": 4,
+            "name": "Qara kitab",
+            "author": "Orxan Pamuk",
+            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-11-16-15-27-181668598038.jpg?v=1"
+        },
+        {
+            "id": 5,
+            "name": "Qara kitab",
+            "author": "Orxan Pamuk",
+            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-11-16-15-27-181668598038.jpg?v=1"
+        },
+        {
+            "id": 6,
+            "name": "Qara kitab",
+            "author": "Orxan Pamuk",
+            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-11-16-15-27-181668598038.jpg?v=1"
+        },
+        {
+            "id": 7,
+            "name": "Qara kitab",
+            "author": "Orxan Pamuk",
+            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-11-16-15-27-181668598038.jpg?v=1"
+        },
+        {
+            "id": 8,
+            "name": "Qara kitab",
+            "author": "Orxan Pamuk",
+            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-11-16-15-27-181668598038.jpg?v=1"
+        },
+        {
+            "id": 9,
+            "name": "Qara kitab",
+            "author": "Orxan Pamuk",
+            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-11-16-15-27-181668598038.jpg?v=1"
+        },
+        {
+            "id": 10,
+            "name": "Qara kitab",
+            "author": "Orxan Pamuk",
+            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-11-"
+        },
+        {
+            "id": 10,
+            "name": "Qara kitab",
+            "author": "Orxan Pamuk",
+            "image": ""
+        },
+        {
+            "id": 10,
+            "name": "Qara kitab",
+            "author": "Orxan Pamuk",
+            "image": ""
+        },
+        {
+            "id": 10,
+            "name": "Qara kitab",
+            "author": "Orxan Pamuk",
+            "image": ""
+        },
+        {
+            "id": 10,
+            "name": "Qara kitab",
+            "author": "Orxan Pamuk",
+            "image": ""
+        },
+        {
+            "id": 10,
+            "name": "Qara kitab",
+            "author": "Orxan Pamuk",
+            "image": ""
+        },
+        {
+            "id": 10,
+            "name": "Qara kitab",
+            "author": "Orxan Pamuk",
+            "image": ""
+        },
+        {
+            "id": 10,
+            "name": "Qara kitab",
+            "author": "Orxan Pamuk",
+            "image": ""
         }
     ]
 }
