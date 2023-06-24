@@ -1,72 +1,59 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import { useSelector } from "react-redux";
+import { RootState } from "../store";
+import CartCard from "./CartCard";
+import Drawer from "@mui/material/Drawer";
+import { useDispatch } from "react-redux";
+import { toggleSideBar } from "../features/sideBarSlice";
 
-type Anchor =  'right';
-
-const Cart=()=> {
-  const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
-    right: false,
-  });
-
-  const toggleDrawer =
-    (anchor: Anchor, open: boolean) =>
-    (event: React.KeyboardEvent | React.MouseEvent) => {
-      if (
-        event.type === 'keydown' &&
-        ((event as React.KeyboardEvent).key === 'Tab' ||
-          (event as React.KeyboardEvent).key === 'Shift')
-      ) {
-        return;
-      }
-      setState({ ...state, [anchor]: open });
-    };
-
+const Cart = () => {
+  const dispatch = useDispatch();
+  const cart = useSelector((state: RootState) => state.cart);
+  const sideBar = useSelector((state: RootState) => state.sideBar);
   return (
-
-    <Box
-      role="presentation"
-      onClick={toggleDrawer('right', false)}
-      onKeyDown={toggleDrawer('right', false)}
+    <Drawer
+      anchor="right"
+      open={sideBar.sideBar}
+      onClose={() => dispatch(toggleSideBar())}
+      sx={{
+        top: "65px",
+        "& .css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop": {
+          top: "65px",
+        },
+        "& .css-1160xiw-MuiPaper-root-MuiDrawer-paper": {
+          top: "65px",
+          width: "350px",
+          height: "calc(100vh - 65px)",
+        },
+      }}
     >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
+      <Box role="presentation">
+        <Typography
+          variant="h5"
+          sx={{
+            textAlign: "center",
+            borderBottom: "1px solid #cccc",
+            paddingY: "10px",
+            fontFamily: "Comfortaa Bold",
+          }}
+        >
+          Cart
+        </Typography>
+
+        {cart.cart.map((item) => (
+          <CartCard
+            key={item.id}
+            id={item.id}
+            image={item.image}
+            title={item.title}
+            author={item.author}
+            price={item.price}
+          />
         ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-    
+      </Box>
+    </Drawer>
   );
-}
+};
 
 export default Cart;

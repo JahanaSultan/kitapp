@@ -19,7 +19,6 @@ import { removeFromCart } from '../features/cartSlice';
 
 const Card1: FC<Data> = ({ id, title, author, price, image, genre, raiting }) => {
 
-  // const [value, setValue] = React.useState<number | null>(2);
 
   // youtube modal 
 
@@ -108,8 +107,10 @@ const Card1: FC<Data> = ({ id, title, author, price, image, genre, raiting }) =>
           justifyContent: "center",
         }}>
           <Rating
-            name="simple-controlled"
-            value={raiting}
+            name="read-only"
+            readOnly
+            defaultValue={raiting}
+            precision={0.5}
             size={"small"}
             onChange={(event, newValue) => {
               // setValue(newValue);
