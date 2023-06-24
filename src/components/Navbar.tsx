@@ -83,21 +83,16 @@ const Navbar = () => {
             justifyContent: "flex-end",
           }}
         >
-          <IconButton>
-            <Badge badgeContent={1} color="secondary" max={10}>
-              <FavoriteBorderOutlinedIcon
-                sx={{
-                  fontSize: 40,
-                  color: "#fff",
-                }}
-              />
-            </Badge>
-          </IconButton>
           <IconButton onClick={() => dispatch(toggleSideBar())}>
             <Badge
               badgeContent={cart.cart.length > 0 ? cart.cart.length : 0}
               color="secondary"
               max={10}
+              sx={{
+                "& .MuiBadge-badge": {
+                  color: "#fff",
+                },
+              }}
             >
               <ShoppingBagOutlinedIcon
                 sx={{

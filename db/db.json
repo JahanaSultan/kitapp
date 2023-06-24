@@ -32,10 +32,10 @@
         },
         {
             "id": 4,
-            "title": "Qara kitab",
-            "author": "Orhan Pamuk",
-            "price": 12.50,
-            "image": "https://www.qanun.az/images/news/compressed/2021-09-02-11-24-421630567482.jpg",
+            "title": "Dəniz canavarı",
+            "author": "Jack London",
+            "price": 6.99,
+            "image": "https://www.qanun.az/images/news/compressed/2021-10-14-12-56-571634201817.jpg",
             "genre": "Roman",
             "page": 496,
             "raiting": 4.5

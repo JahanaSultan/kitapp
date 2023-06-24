@@ -6,6 +6,7 @@ import CartCard from "./CartCard";
 import Drawer from "@mui/material/Drawer";
 import { useDispatch } from "react-redux";
 import { toggleSideBar } from "../features/sideBarSlice";
+import Button from "@mui/material/Button";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -51,6 +52,43 @@ const Cart = () => {
             price={item.price}
           />
         ))}
+      </Box>
+      <Box>
+        <Typography
+          variant="h5"
+          sx={{
+            textAlign: "center",
+            paddingY: "10px",
+            fontFamily: "Comfortaa Bold",
+          }}
+        >
+          Total: {cart.totalPrice}₼
+        </Typography>
+
+        <Typography
+          variant="h5"
+          sx={{
+            textAlign: "center",
+            paddingY: "10px",
+            fontFamily: "Comfortaa Bold",
+          }}
+        >
+          <Button 
+          sx={{
+            backgroundColor: "#fc6a03",
+            color: "#fff",
+            width: "90%",
+            margin: "0 auto",
+            "&:hover": {
+              backgroundColor: "#fc6a03",
+            },
+            
+          }}
+          >
+            Checkout
+          </Button>
+        </Typography>
+
       </Box>
     </Drawer>
   );
