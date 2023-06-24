@@ -37,7 +37,6 @@ const Featured = () => {
                 sx={{
                     display: "flex",
                     justifyContent: "space-between",
-                    mt: "50px",
                     flexWrap: "wrap",
                 }}
             >

@@ -1,27 +1,26 @@
 import { Typography } from "@mui/material"
 import { FC } from "react"
+import { Box } from "@mui/material"
 
 export interface Props {
     h1: string,
     text: string
 }
 
-const Heading: FC<Props> = ({ h1, text }) => {
+const Heading: FC<Props> = ({h1, text}) => {
     return (
-        <>
+        <Box sx={{mb:8, mt:8}}>
             <Typography
                 variant="h4"
                 sx={{
                     textAlign: "center",
                     color: "#fc6a03",
-                    mt: "50px",
                     fontWeight: "bold",
                     fontFamily: "DMSerif",
                 }}
             >
                 {h1}
             </Typography>
-
             <Typography
                 variant="h6"
                 sx={{
@@ -33,7 +32,7 @@ const Heading: FC<Props> = ({ h1, text }) => {
             >
                 {text}
             </Typography>
-        </>
+        </Box>
     )
 }
 

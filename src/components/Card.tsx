@@ -36,7 +36,6 @@ const Card1: FC<Data> = ({ id, title, author, price, image, genre, raiting }) =>
   return (
     <Card sx={{
       width: "19%",
-      mt: "50px",
       position: "relative",
       bgcolor: "#00001a",
       border: "1px solid rgba(255,255,255, .2)",
