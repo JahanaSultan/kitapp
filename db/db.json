@@ -184,32 +184,31 @@
         },
         {
             "id": 4,
-            "name":"Kosmos",
+            "name": "Kosmos",
             "author": "Carl Edward Sagan",
-            "image":"https://www.qanun.az/images/news/compressed/190x305/2022-08-15-14-47-241660560444.jpg?v=1"
+            "image": "https://www.qanun.az/images/news/compressed/190x305/2022-08-15-14-47-241660560444.jpg?v=1"
         },
         {
             "id": 5,
-            "name":"Gələcəyin fizikası",
+            "name": "Gələcəyin fizikası",
             "author": "Michio Kaku",
             "image": "https://www.qanun.az/images/news/compressed/190x305/2022-08-15-10-08-231660543703.jpg?v=1"
         },
         {
             "id": 6,
-            "name":"Kitab oğrusu",
+            "name": "Kitab oğrusu",
             "author": "Walter Moers",
             "image": "https://www.qanun.az/images/news/compressed/170x267/2022-07-04-16-45-161656938716.jpg?v=1"
-
         },
         {
             "id": 7,
-            "name":"Kosmik sürətli astrofizika",
+            "name": "Kosmik sürətli astrofizika",
             "author": "Neil deGrasse Tyson",
             "image": "https://www.qanun.az/images/news/compressed/170x267/2022-04-30-16-21-271651321287.jpg?v=1"
         },
         {
             "id": 8,
-            "name":"Əxlaqi Nasiri",
+            "name": "Əxlaqi Nasiri",
             "author": "Nasir ad-Din at-Tusi",
             "image": "https://www.qanun.az/images/news/compressed/170x267/2021-08-26-11-37-021629963422.png?v=1"
         },
@@ -224,6 +223,38 @@
             "name": "Yaşıl mil",
             "author": "Stefan Zweig",
             "image": "https://www.qanun.az/images/news/compressed/170x267/2021-08-27-14-11-431630059103.png?v=1"
+        }
+    ],
+    "blogs": [
+        {
+            "id": 1,
+            "title": "How to be a good reader",
+            "image": "https://about.proquest.com/globalassets/proquest/media/images/decrotive/oldbooks.jpg",
+            "about": "Competently cultivate highly efficient methodologies and collaborative e-markets. Enthusiastically integrate wireless e-services via client-focused e-commerce. Efficiently administrate vertical e-commerce for cross-platform testing procedures. Assertively maximize principle-centered action items rather than client-centered materials. Energistically."
+        },
+        {
+            "id": 2,
+            "title": "Best E-Reader for 2023: Top Picks for Book Lovers",
+            "image": "https://www.cnet.com/a/img/resize/0a72c333e2ee3cf183f0bf5ac5679dff4d84834d/hub/2020/03/04/c20dbc87-8a7c-464b-b7cd-454c1ad40e41/e-book-readers.jpg?auto=webp&fit=crop&height=900&width=1200",
+            "about": "Competently cultivate highly efficient methodologies and collaborative e-markets. Enthusiastically integrate wireless e-services via client-focused e-commerce. Efficiently administrate vertical e-commerce for cross-platform testing procedures. Assertively maximize principle-centered action items rather than client-centered materials. Energistically."
+        },
+        {
+            "id": 3,
+            "title" : "40 Transformative Poems About Life Everyone Should Know",
+            "image": "https://images-cdn.reedsy.com/discovery/post/169/featured_image/a183708c28ea37682a69ea7348cedd0390993c68.jpg",
+            "about": "Competently cultivate highly efficient methodologies and collaborative e-markets. Enthusiastically integrate wireless e-services via client-focused e-commerce. Efficiently administrate vertical e-commerce for cross-platform testing procedures. Assertively maximize principle-centered action items rather than client-centered materials. Energistically."
+        },
+        {
+            "id": 4,
+            "title": "25 Best Bookshelves Money Can Buy",
+            "image":"https://images-cdn.reedsy.com/discovery/post/167/featured_image/55357bed26460dc7cddda0a8dd031df05b135c75.jpg",
+            "about": "Aleksandr Isayevich Solzhenitsyn was a Russian novelist, philosopher, historian, short story writer and political prisoner. Solzhenitsyn was an outspoken critic of the Soviet Union and Communism and helped to raise global awareness of its Gulag forced labor camp system. After serving in the Soviet Army during World War II, he was sentenced to spend eight years in a labor camp and then internal exile for criticizing Joseph Stalin in a private letter. His sentence was commuted after he was diagnosed with a tumor and he was allowed to serve his exile in Kazakhstan. Solzhenitsyn moved to Switzerland and then the United States in 1976. He was awarded the 1970 Nobel Prize in Literature \"for the ethical force with which he has pursued the indispensable traditions of Russian literature\". Solzhenitsyn was afraid to go to Stockholm to receive his award for fear that he would not be allowed to reenter. He was eventually expelled from the Soviet Union in 1974, but returned to Russia in 1994 after the dissolution of the Soviet Union."
+        },
+        {
+            "id": 5,
+            "title": "25 Best Psychology Books to Read in 2023",
+            "image": "https://images-cdn.reedsy.com/discovery/post/159/featured_image/41800732e86336577f1aec2b34b380a26ee62fa6.jpg",
+            "about": "Competently cultivate highly efficient methodologies and collaborative e-markets. Enthusiastically integrate wireless e-services via client-focused e-commerce. Efficiently administrate vertical e-commerce for cross-platform testing procedures. Assertively maximize principle-centered action items rather than client-centered materials. Energistically."
         }
     ]
 }

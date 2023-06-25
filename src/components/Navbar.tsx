@@ -65,22 +65,22 @@ const Navbar = () => {
             justifyContent: "space-between",
           }}
         >
-          <NavLink to="/" style={{ textDecoration: "none" }}>
+          <NavLink to="/">
             <Typography variant="h6" color="text.primary">
               Home
             </Typography>
           </NavLink>
-          <NavLink to="/" style={{ textDecoration: "none" }}>
+          <NavLink to="/">
             <Typography variant="h6" color="text.primary">
               Blog
             </Typography>
           </NavLink>
-          <NavLink to="/" style={{ textDecoration: "none" }}>
+          <NavLink to="/">
             <Typography variant="h6" color="text.primary">
               Shop
             </Typography>
           </NavLink>
-          <NavLink to="/" style={{ textDecoration: "none" }}>
+          <NavLink to="/">
             <Typography variant="h6" color="text.primary">
               About
             </Typography>

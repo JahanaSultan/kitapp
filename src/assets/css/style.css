@@ -2,12 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --orange: #fc6a03;
-  --dark-blue: #00001d;
-  --light-blue: #0a0a2a;
-  --light-gray: #cccccc;
-  --white: #ffffff;
-  --white-opacity: #ffffff26;
+  text-decoration: none;
+  list-style: none;
 }
 
 @font-face {

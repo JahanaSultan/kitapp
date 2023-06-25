@@ -54,15 +54,18 @@ const Featured = () => {
           />
         ))}
       </Box>
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
-        <Button
+      <Button
           variant="contained"
           sx={{
-            margin: "20px auto",
             width: "250px",
             height: "40px",
             bgcolor: "primary.dark",
             color: "text.primary",
+            margin: "50px auto",
+            marginBottom: "0px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             "&:hover": {
               backgroundColor: "transparent",
               color: "primary.dark",
@@ -77,7 +80,6 @@ const Featured = () => {
           See More{" "}
           <ArrowForwardOutlinedIcon sx={{ transition: "transform 0.5s" }} />
         </Button>
-      </Box>
     </Box>
   );
 };
