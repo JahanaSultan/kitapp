@@ -12,12 +12,11 @@ const Blogs = () => {
         h1="Blogs"
         text="Read our blogs to get more information about our services and products."
       />
-      <Box 
-      sx={{
-        display: "flex"
-      }}
-      >
-      </Box>
+      <Box
+        sx={{
+          display: "flex",
+        }}
+      ></Box>
     </Box>
   );
 };

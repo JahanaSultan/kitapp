@@ -3,24 +3,23 @@ import Heading from "./Heading";
 import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide";
 import RentBookCard from "./RentBookCard";
 import { useEffect, useState } from "react";
+import { RentProps } from "../types/types";
 
 const RentBookShelf = () => {
-  interface RentBook{
-    id: number;
-    name: string;
-    author: string;
-    image: string;
-  }
-
-  const [books, setBooks] = useState<RentBook[]>([]);
+  const [books, setBooks] = useState<RentProps[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/rentbook")
-      .then((response) => response.json())
-      .then((json) => {
-        setBooks(json);
-      });
-  });
+    try {
+      fetch("http://localhost:3001/rentbook")
+        .then((response) => response.json())
+        .then((json) => {
+          setBooks(json);
+        });
+    } catch (error) {
+      setError("Error accured while fetching rent books");
+    }
+  },[]);
 
   return (
     <Box

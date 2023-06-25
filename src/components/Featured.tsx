@@ -7,15 +7,20 @@ import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import { Book } from "../types/types";
 
 const Featured = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Book[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/kitab")
-      .then((response) => response.json())
-      .then((json) => {
-        setData(json);
-        console.log(json);
-      });
+    try {
+      fetch("http://localhost:3001/kitab")
+        .then((response) => response.json())
+        .then((json) => {
+          setData(json);
+          console.log(json);
+        });
+    } catch (e) {
+      setError("An error occurred while fetching books.");
+    }
   }, []);
 
   return (
@@ -64,12 +69,13 @@ const Featured = () => {
               color: "#fc6a03",
               border: "1px solid #fc6a03",
             },
-            '&:hover svg': {
-                transform: 'translateX(5px)'
-            }
+            "&:hover svg": {
+              transform: "translateX(5px)",
+            },
           }}
         >
-          See More <ArrowForwardOutlinedIcon sx={{transition:"transform 0.5s"}}/>
+          See More{" "}
+          <ArrowForwardOutlinedIcon sx={{ transition: "transform 0.5s" }} />
         </Button>
       </Box>
     </Box>

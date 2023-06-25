@@ -14,3 +14,23 @@ export interface Author{
     image: string;
     about: string;
 }
+
+export interface CartCardProps {
+  id: number;
+  image: string;
+  title: string;
+  author: string;
+  price: number;
+}
+
+export interface HeadingProps {
+  h1: string,
+  text: string
+}
+
+export interface RentProps {
+  id: number;
+  name: string;
+  image: string;
+  author: string;
+}

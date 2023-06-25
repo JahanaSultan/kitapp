@@ -8,13 +8,7 @@ import { useDispatch } from 'react-redux';
 import { modalOpen } from '../features/modalSlice';
 
 const Header = () => {
-    // open modal
-
     const dispatch = useDispatch();
-    const handleOpen = () => {
-        dispatch(modalOpen());
-    };
-
     return (
         <Box sx={{
             width: "100%",
@@ -91,7 +85,7 @@ const Header = () => {
                         }
                     
                     }}
-                    onClick={handleOpen}
+                    onClick={()=>dispatch(modalOpen())}
                     >
                         <PlayArrowIcon sx={{ fontSize: 35 }} />
                     </Button>

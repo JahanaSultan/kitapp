@@ -6,10 +6,7 @@ import { useEffect, useState } from "react";
 import AuthorCard from "./AuthorCard";
 import { Author } from "../types/types";
 
-
 const Authors = () => {
-
-
   const [authors, setAuthors] = useState<Author[]>([]);
   const [error, setError] = useState<string | null>(null);
 

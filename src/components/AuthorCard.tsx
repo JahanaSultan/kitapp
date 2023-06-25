@@ -2,7 +2,7 @@ import { Card } from "@mui/material";
 import { Typography } from "@mui/material";
 import { FC } from "react";
 import { CardMedia } from "@mui/material";
-import {Author} from "../types/types"
+import { Author } from "../types/types";
 
 const AuthorCard: FC<Author> = ({ id, name, image, about }) => {
   return (
@@ -23,8 +23,8 @@ const AuthorCard: FC<Author> = ({ id, name, image, about }) => {
         loading="lazy"
         sx={{
           margin: "auto",
-          width: '100px',
-          height: '100px',
+          width: "100px",
+          height: "100px",
           borderRadius: "50%",
           border: "3px solid var(--orange)",
         }}

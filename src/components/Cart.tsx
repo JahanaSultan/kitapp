@@ -73,22 +73,20 @@ const Cart = () => {
             fontFamily: "Comfortaa Bold",
           }}
         >
-          <Button 
-          sx={{
-            backgroundColor: "#fc6a03",
-            color: "#fff",
-            width: "90%",
-            margin: "0 auto",
-            "&:hover": {
+          <Button
+            sx={{
               backgroundColor: "#fc6a03",
-            },
-            
-          }}
+              color: "#fff",
+              width: "90%",
+              margin: "0 auto",
+              "&:hover": {
+                backgroundColor: "#fc6a03",
+              },
+            }}
           >
             Checkout
           </Button>
         </Typography>
-
       </Box>
     </Drawer>
   );

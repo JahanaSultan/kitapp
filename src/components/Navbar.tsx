@@ -18,7 +18,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
 
   //sticky navbar
-  const [scroll, setScroll] = useState(false);
+  const [scroll, setScroll] = useState<boolean>(false);
 
   window.addEventListener("scroll", () => {
     window.scrollY > 300 ? setScroll(true) : setScroll(false);

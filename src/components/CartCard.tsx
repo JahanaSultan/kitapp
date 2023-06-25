@@ -7,14 +7,7 @@ import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
 import { IconButton } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { removeFromCart } from "../features/cartSlice";
-
-interface CartCardProps {
-  id: number;
-  image: string;
-  title: string;
-  author: string;
-  price: number;
-}
+import { CartCardProps } from "../types/types";
 
 const CartCard: FC<CartCardProps> = ({ id, image, title, author, price }) => {
   const dispatch = useDispatch();

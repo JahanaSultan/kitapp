@@ -1,20 +1,16 @@
 import Dialog from "@mui/material/Dialog";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
 import Button from "@mui/material/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { modalClose } from "../features/modalSlice";
 import { RootState } from "../store";
 
 const Modal = () => {
-  
   const dispatch = useDispatch();
   const modal = useSelector((state: RootState) => state.modal);
-  const handleClose = () => {
-    dispatch(modalClose());
-  };
 
   return (
-    <Dialog open={modal.open} onClose={handleClose}>
+    <Dialog open={modal.open} onClose={() => dispatch(modalClose())}>
       <iframe
         width="600"
         height="400"
@@ -23,12 +19,12 @@ const Modal = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       ></iframe>
       <Button
-        onClick={handleClose}
+        onClick={() => dispatch(modalClose())}
         sx={{
           bgcolor: "red",
           color: "#fff",
-          '&:hover': {
-            bgcolor: "red"
+          "&:hover": {
+            bgcolor: "red",
           },
         }}
       >
