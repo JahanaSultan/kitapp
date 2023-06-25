@@ -9,7 +9,6 @@ import Blogs from "../components/Blogs"
 const Home = () => {
     return (
         <>
-            <Navbar/>
             <Header/>
             <Featured/>
             <Authors/>

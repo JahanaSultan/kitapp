@@ -2,6 +2,8 @@ import { ThemeProvider } from "@emotion/react";
 import Home from "./pages/Home";
 import { createTheme } from "@mui/material";
 import {Routes, Route} from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export const theme = createTheme({
   palette: {
@@ -24,9 +26,11 @@ export const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
+      <Footer/>
     </ThemeProvider>
   );
 }
