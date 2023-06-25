@@ -21,7 +21,7 @@ const RentBookCard: FC<Props> = ({id, name, image, author}) => {
         display: "flex",
         boxShadow: "none",
         '&:hover .MuiCardContent-root': {
-          top: 0,
+          opacity: 1,
         }
       }}
     >
@@ -41,13 +41,14 @@ const RentBookCard: FC<Props> = ({id, name, image, author}) => {
         backgroundColor: "#00001ddd",
         width: "100%",
         height: "100%",
-        top: '-200%',
+        top: 0,
         left: 0,
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-end",
         alignItems: "flex-start",
         transition: "all 0.5s ease",
+        opacity: 0,
       }}>
         <Typography gutterBottom variant="h6" component="div"
         sx={{

@@ -1,16 +1,10 @@
 import { Card } from "@mui/material";
-import { Box } from "@mui/material";
 import { Typography } from "@mui/material";
 import { FC } from "react";
+import { CardMedia } from "@mui/material";
+import {Author} from "../types/types"
 
-export interface Data {
-  id: number;
-  name: string;
-  image: string;
-  about: string;
-}
-
-const AuthorCard: FC<Data> = ({ id, name, image, about }) => {
+const AuthorCard: FC<Author> = ({ id, name, image, about }) => {
   return (
     <Card
       sx={{
@@ -22,24 +16,19 @@ const AuthorCard: FC<Data> = ({ id, name, image, about }) => {
         padding: "10px",
       }}
     >
-      <Box
+      <CardMedia
+        component="img"
+        image={image}
+        alt={name}
+        loading="lazy"
         sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "40%",
-          width: "100%",
-          "& img": {
-            width: "100px",
-            height: "100px",
-            borderRadius: "50%",
-            objectFit: "cover",
-            border: "5px solid #fc6a03",
-          },
+          margin: "auto",
+          width: '100px',
+          height: '100px',
+          borderRadius: "50%",
+          border: "3px solid var(--orange)",
         }}
-      >
-        <img src={image} alt="writer img" />
-      </Box>
+      ></CardMedia>
 
       <Typography
         variant="h6"

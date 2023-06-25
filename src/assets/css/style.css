@@ -10,8 +10,6 @@
   --white-opacity: #ffffffc7;
 }
 
-
-
 @font-face {
   font-family: 'Comfortaa Regular';
   src: url('../fonts/Comfortaa-Regular.ttf');
@@ -31,7 +29,6 @@ body {
   font-family: 'Comfortaa Regular';
   background-color: #00001d;
 }
-
 
 @keyframes pulse {
   0% {

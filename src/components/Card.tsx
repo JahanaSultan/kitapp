@@ -1,24 +1,20 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import { Box } from "@mui/system";
-import Button from "@mui/material/Button";
-import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
-import Rating from "@mui/material/Rating";
-import { Data } from "./Featured";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/cartSlice";
 import { RootState } from "../store";
 import { useSelector } from "react-redux";
-import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import { removeFromCart } from "../features/cartSlice";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Box, Typography } from "@mui/material";
+import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
+import Rating from "@mui/material/Rating";
+import { Book } from "../types/types";
 
-const Card1: FC<Data> = ({
+const Card1: FC<Book> = ({
   id,
   title,
   author,
@@ -27,11 +23,8 @@ const Card1: FC<Data> = ({
   genre,
   raiting,
 }) => {
-  // youtube modal
-
   const dispatch = useDispatch();
   const cart = useSelector((state: RootState) => state.cart);
-  console.log(cart);
   const addToCartHandler = () => {
     dispatch(addToCart({ id, title, author, price, image, genre, raiting }));
   };
@@ -130,7 +123,15 @@ const Card1: FC<Data> = ({
       >
         <Typography
           variant="h6"
-          sx={{ fontSize: 16, fontWeight: "bold", color: "#fc6a03", height: "80px", overflow: "hidden", textOverflow: "ellipsis", textAlign: "center"  }}
+          sx={{
+            fontSize: 16,
+            fontWeight: "bold",
+            color: "#fc6a03",
+            height: "80px",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            textAlign: "center",
+          }}
         >
           {title} - {author}
         </Typography>
@@ -150,7 +151,6 @@ const Card1: FC<Data> = ({
             defaultValue={raiting}
             precision={0.5}
             size={"small"}
-            onChange={(event, newValue) => {}}
             sx={{
               mb: "10px",
               ".MuiRating-iconEmpty svg": {

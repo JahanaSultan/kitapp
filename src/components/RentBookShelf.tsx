@@ -5,20 +5,29 @@ import RentBookCard from "./RentBookCard";
 import { useEffect, useState } from "react";
 
 const RentBookShelf = () => {
-    const [books, setBooks] = useState([]);
+  interface RentBook{
+    id: number;
+    name: string;
+    author: string;
+    image: string;
+  }
 
-    useEffect(()=>{
-        fetch("http://localhost:3001/rentbook")
-        .then((response) => response.json())
-        .then((json) => {
-          setBooks(json);
-        });
-    })
-    
+  const [books, setBooks] = useState<RentBook[]>([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/rentbook")
+      .then((response) => response.json())
+      .then((json) => {
+        setBooks(json);
+      });
+  });
+
   return (
-    <Box sx={{
+    <Box
+      sx={{
         paddingX: "24px",
-    }}>
+      }}
+    >
       <Heading
         h1="Rent Book Shelf"
         text="Affordable prices and free return shipping at the end of the rental period."
@@ -27,21 +36,25 @@ const RentBookShelf = () => {
       <Splide
         hasTrack={false}
         options={{
-          // type: "loop",
-          perPage: 8,
+          perPage: 10,
           focus: "center",
           gap: "5px",
           pauseOnHover: true,
           pagination: false,
-          drag   : 'free',
+          drag: "free",
         }}
       >
         <SplideTrack>
-            {books.slice(0, 30).map((item: any) => (
-          <SplideSlide>
-            <RentBookCard id={item.id} name={item.name} author={item.author} image={item.image}/>
-          </SplideSlide>
-            ))}
+          {books.slice(0, 30).map((item: any) => (
+            <SplideSlide>
+              <RentBookCard
+                id={item.id}
+                name={item.name}
+                author={item.author}
+                image={item.image}
+              />
+            </SplideSlide>
+          ))}
         </SplideTrack>
       </Splide>
     </Box>

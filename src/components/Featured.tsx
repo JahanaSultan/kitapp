@@ -4,15 +4,7 @@ import Card1 from "./Card";
 import Heading from "./Heading";
 import Button from "@mui/material/Button";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
-export interface Data {
-  id: number;
-  title: string;
-  author: string;
-  price: number;
-  image: string;
-  genre: string;
-  raiting: number;
-}
+import { Book } from "../types/types";
 
 const Featured = () => {
   const [data, setData] = useState([]);
@@ -46,7 +38,7 @@ const Featured = () => {
           flexWrap: "wrap",
         }}
       >
-        {data.slice(0, 10).map((item: Data) => (
+        {data.slice(0, 10).map((item: Book) => (
           <Card1
             key={item.id}
             id={item.id}

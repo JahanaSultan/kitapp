@@ -4,6 +4,7 @@ import Featured from "../components/Featured"
 import Authors from "../components/Authors"
 import NewBook from "../components/NewBook"
 import RentBookShelf from "../components/RentBookShelf"
+import Blogs from "../components/Blogs"
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <Authors/>
             <NewBook/>
             <RentBookShelf/>
+            <Blogs/>
         </>
     )
 }
