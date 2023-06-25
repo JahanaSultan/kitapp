@@ -184,87 +184,46 @@
         },
         {
             "id": 4,
-            "name": "Qara kitab",
-            "author": "Orxan Pamuk",
-            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-11-16-15-27-181668598038.jpg?v=1"
+            "name":"Kosmos",
+            "author": "Carl Edward Sagan",
+            "image":"https://www.qanun.az/images/news/compressed/190x305/2022-08-15-14-47-241660560444.jpg?v=1"
         },
         {
             "id": 5,
-            "name": "Qara kitab",
-            "author": "Orxan Pamuk",
-            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-11-16-15-27-181668598038.jpg?v=1"
+            "name":"Gələcəyin fizikası",
+            "author": "Michio Kaku",
+            "image": "https://www.qanun.az/images/news/compressed/190x305/2022-08-15-10-08-231660543703.jpg?v=1"
         },
         {
             "id": 6,
-            "name": "Qara kitab",
-            "author": "Orxan Pamuk",
-            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-11-16-15-27-181668598038.jpg?v=1"
+            "name":"Kitab oğrusu",
+            "author": "Walter Moers",
+            "image": "https://www.qanun.az/images/news/compressed/170x267/2022-07-04-16-45-161656938716.jpg?v=1"
+
         },
         {
             "id": 7,
-            "name": "Qara kitab",
-            "author": "Orxan Pamuk",
-            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-11-16-15-27-181668598038.jpg?v=1"
+            "name":"Kosmik sürətli astrofizika",
+            "author": "Neil deGrasse Tyson",
+            "image": "https://www.qanun.az/images/news/compressed/170x267/2022-04-30-16-21-271651321287.jpg?v=1"
         },
         {
             "id": 8,
-            "name": "Qara kitab",
-            "author": "Orxan Pamuk",
-            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-11-16-15-27-181668598038.jpg?v=1"
+            "name":"Əxlaqi Nasiri",
+            "author": "Nasir ad-Din at-Tusi",
+            "image": "https://www.qanun.az/images/news/compressed/170x267/2021-08-26-11-37-021629963422.png?v=1"
         },
         {
             "id": 9,
-            "name": "Qara kitab",
-            "author": "Orxan Pamuk",
-            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-11-16-15-27-181668598038.jpg?v=1"
+            "name": "Zero limit",
+            "author": "Joe Vitale",
+            "image": "https://www.qanun.az/images/news/compressed/170x267/2021-01-21-01-27-351611178055.jpeg?v=1"
         },
         {
             "id": 10,
-            "name": "Qara kitab",
-            "author": "Orxan Pamuk",
-            "image": "https://www.qanun.az/images/news/compressed/155x240/2022-11-"
-        },
-        {
-            "id": 10,
-            "name": "Qara kitab",
-            "author": "Orxan Pamuk",
-            "image": ""
-        },
-        {
-            "id": 10,
-            "name": "Qara kitab",
-            "author": "Orxan Pamuk",
-            "image": ""
-        },
-        {
-            "id": 10,
-            "name": "Qara kitab",
-            "author": "Orxan Pamuk",
-            "image": ""
-        },
-        {
-            "id": 10,
-            "name": "Qara kitab",
-            "author": "Orxan Pamuk",
-            "image": ""
-        },
-        {
-            "id": 10,
-            "name": "Qara kitab",
-            "author": "Orxan Pamuk",
-            "image": ""
-        },
-        {
-            "id": 10,
-            "name": "Qara kitab",
-            "author": "Orxan Pamuk",
-            "image": ""
-        },
-        {
-            "id": 10,
-            "name": "Qara kitab",
-            "author": "Orxan Pamuk",
-            "image": ""
+            "name": "Yaşıl mil",
+            "author": "Stefan Zweig",
+            "image": "https://www.qanun.az/images/news/compressed/170x267/2021-08-27-14-11-431630059103.png?v=1"
         }
     ]
 }
