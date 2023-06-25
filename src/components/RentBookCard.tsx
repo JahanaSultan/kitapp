@@ -1,9 +1,11 @@
-import { Card } from "@mui/material";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  Button,
+} from "@mui/material";
 import { FC } from "react";
-import Button from "@mui/material/Button";
 import { RentProps } from "../types/types";
 
 const RentBookCard: FC<RentProps> = ({ id, name, image, author }) => {
@@ -33,6 +35,7 @@ const RentBookCard: FC<RentProps> = ({ id, name, image, author }) => {
         sx={{
           position: "absolute",
           backgroundColor: "#00001ddd",
+          backdropFilter: "blur(2px)",
           width: "100%",
           height: "100%",
           top: 0,
@@ -40,7 +43,7 @@ const RentBookCard: FC<RentProps> = ({ id, name, image, author }) => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "flex-end",
-          transition: "all 0.5s ease",
+          transition: "0.5s",
           opacity: 0,
         }}
       >
@@ -49,10 +52,11 @@ const RentBookCard: FC<RentProps> = ({ id, name, image, author }) => {
           variant="h6"
           component="div"
           sx={{
-            color: "#fff",
+            color: "text.primary",
             fontSize: "16px",
             lineHeight: "1",
-            borderBottom: "2px solid var(--orange)",
+            borderBottom: "2px solid",
+            borderColor: "primary.dark",
           }}
         >
           {name}
@@ -61,15 +65,16 @@ const RentBookCard: FC<RentProps> = ({ id, name, image, author }) => {
           variant="body2"
           color="text.secondary"
           sx={{
-            color: "var(--light-gray)",
+            color: "primary.light",
           }}
         >
           {author}
         </Typography>
         <Button
           sx={{
-            color: "var(--orange)",
-            border: "1px solid var(--orange)",
+            color: "primary.dark",
+            border: "1px solid",
+            borderColor: "primary.dark",
             width: "100%",
             height: "25px",
             padding: "0",

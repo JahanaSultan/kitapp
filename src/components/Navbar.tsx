@@ -1,9 +1,7 @@
-import { AppBar, Box, Drawer, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import logo from "../assets/img/logo.svg";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import Link from "@mui/material/Link";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import IconButton from "@mui/material/IconButton/IconButton";
 import Badge from "@mui/material/Badge/Badge";
 import { useSelector } from "react-redux";
@@ -12,6 +10,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { toggleSideBar } from "../features/sideBarSlice";
 import Cart from "./Cart";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const cart = useSelector((state: RootState) => state.cart);
@@ -28,7 +27,9 @@ const Navbar = () => {
     <AppBar
       position={scroll ? "sticky" : "static"}
       sx={{
-        borderBottom: "1px solid rgba(255,255,255, .1)",
+        borderBottom: "1px solid",
+        borderColor: "primary.contrastText",
+        bgcolor: "primary.main",
       }}
     >
       <Toolbar>
@@ -49,6 +50,7 @@ const Navbar = () => {
           />
           <Typography
             variant="h4"
+            color="text.primary"
             sx={{
               fontFamily: "Comfortaa Bold",
             }}
@@ -63,18 +65,26 @@ const Navbar = () => {
             justifyContent: "space-between",
           }}
         >
-          <Link href="#" underline="none" color="inherit">
-            <Typography variant="h6">Home</Typography>
-          </Link>
-          <Link href="" underline="none" color="inherit">
-            <Typography variant="h6">Blog</Typography>
-          </Link>
-          <Link href="" underline="none" color="inherit">
-            <Typography variant="h6">Shop</Typography>
-          </Link>
-          <Link href="" underline="none" color="inherit">
-            <Typography variant="h6">About</Typography>
-          </Link>
+          <NavLink to="/" style={{ textDecoration: "none" }}>
+            <Typography variant="h6" color="text.primary">
+              Home
+            </Typography>
+          </NavLink>
+          <NavLink to="/" style={{ textDecoration: "none" }}>
+            <Typography variant="h6" color="text.primary">
+              Blog
+            </Typography>
+          </NavLink>
+          <NavLink to="/" style={{ textDecoration: "none" }}>
+            <Typography variant="h6" color="text.primary">
+              Shop
+            </Typography>
+          </NavLink>
+          <NavLink to="/" style={{ textDecoration: "none" }}>
+            <Typography variant="h6" color="text.primary">
+              About
+            </Typography>
+          </NavLink>
         </Box>
         <Box
           sx={{
@@ -90,14 +100,14 @@ const Navbar = () => {
               max={10}
               sx={{
                 "& .MuiBadge-badge": {
-                  color: "#fff",
+                  color: "text.primary",
                 },
               }}
             >
               <ShoppingBagOutlinedIcon
                 sx={{
                   fontSize: 40,
-                  color: "#fff",
+                  color: "text.primary",
                 }}
               />
             </Badge>
@@ -108,7 +118,7 @@ const Navbar = () => {
             <AccountCircleOutlinedIcon
               sx={{
                 fontSize: 40,
-                color: "#fff",
+                color: "text.primary",
               }}
             />
           </IconButton>

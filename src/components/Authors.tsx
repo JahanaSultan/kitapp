@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Heading from "./Heading";
 import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
@@ -28,6 +28,7 @@ const Authors = () => {
         mb: "50px",
       }}
     >
+      egstrtgergerge
       <Heading
         h1={"Writers Of The Month"}
         text={
@@ -35,20 +36,19 @@ const Authors = () => {
         }
       />
       {error ? (
-        <Box
+        <Typography variant="h5"
           sx={{
-            color: "red",
+            color: "error.main",
             textAlign: "center",
             fontSize: "20px",
           }}
         >
           {error}
-        </Box>
+        </Typography>
       ) : (
         <Splide
           hasTrack={false}
           options={{
-            // type: "loop",
             perPage: 5,
             focus: "center",
             gap: "5px",

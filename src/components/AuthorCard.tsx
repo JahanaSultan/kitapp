@@ -1,7 +1,5 @@
-import { Card } from "@mui/material";
-import { Typography } from "@mui/material";
+import { Card, Typography, CardMedia } from "@mui/material";
 import { FC } from "react";
-import { CardMedia } from "@mui/material";
 import { Author } from "../types/types";
 
 const AuthorCard: FC<Author> = ({ id, name, image, about }) => {
@@ -11,8 +9,9 @@ const AuthorCard: FC<Author> = ({ id, name, image, about }) => {
         width: "100%",
         height: "300px",
         borderRadius: "20px",
-        border: "1px solid rgba(255,255,255, .2)",
-        backgroundColor: "#00001a",
+        border: "1px solid",
+        borderColor: "primary.contrastText",
+        backgroundColor: "primary.main",
         padding: "10px",
       }}
     >
@@ -26,7 +25,8 @@ const AuthorCard: FC<Author> = ({ id, name, image, about }) => {
           width: "100px",
           height: "100px",
           borderRadius: "50%",
-          border: "3px solid var(--orange)",
+          border: "3px solid",
+          borderColor: "primary.dark",
         }}
       ></CardMedia>
 
@@ -36,13 +36,13 @@ const AuthorCard: FC<Author> = ({ id, name, image, about }) => {
           textAlign: "center",
           marginY: "20px",
           fontSize: "18px",
-          color: "#fc6a03",
+          color: "primary.dark",
           fontFamily: "DMSerif",
         }}
       >
         {name}
       </Typography>
-      <Typography variant="body2" sx={{ color: "#ccc" }}>
+      <Typography variant="body2" color="primary.light">
         {about.slice(0, 100) + "..."}
       </Typography>
     </Card>

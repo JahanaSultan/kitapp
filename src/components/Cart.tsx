@@ -1,12 +1,8 @@
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import { useSelector } from "react-redux";
+import { Typography, Box, Drawer, Button } from "@mui/material";
+import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../store";
 import CartCard from "./CartCard";
-import Drawer from "@mui/material/Drawer";
-import { useDispatch } from "react-redux";
 import { toggleSideBar } from "../features/sideBarSlice";
-import Button from "@mui/material/Button";
 
 const Cart = () => {
   const dispatch = useDispatch();
@@ -19,10 +15,10 @@ const Cart = () => {
       onClose={() => dispatch(toggleSideBar())}
       sx={{
         top: "65px",
-        "& .css-i9fmh8-MuiBackdrop-root-MuiModal-backdrop": {
+        "& .MuiBackdrop-root": {
           top: "65px",
         },
-        "& .css-1160xiw-MuiPaper-root-MuiDrawer-paper": {
+        "& .MuiPaper-elevation16.MuiDrawer-paper": {
           top: "65px",
           width: "350px",
           height: "calc(100vh - 65px)",
@@ -34,14 +30,15 @@ const Cart = () => {
           variant="h5"
           sx={{
             textAlign: "center",
-            borderBottom: "1px solid #cccc",
+            borderBottom: "1px solid",
+            borderColor: "primary.light",
             paddingY: "10px",
             fontFamily: "Comfortaa Bold",
+            color: "primary.main",
           }}
         >
           Cart
         </Typography>
-
         {cart.cart.map((item) => (
           <CartCard
             key={item.id}
@@ -60,33 +57,25 @@ const Cart = () => {
             textAlign: "center",
             paddingY: "10px",
             fontFamily: "Comfortaa Bold",
+            color: "primary.main",
           }}
         >
           Total: {cart.totalPrice}₼
         </Typography>
-
-        <Typography
-          variant="h5"
+        <Button
           sx={{
-            textAlign: "center",
-            paddingY: "10px",
-            fontFamily: "Comfortaa Bold",
+            backgroundColor: "primary.dark",
+            color: "text.primary",
+            margin: "0 auto",
+            width: "90%",
+            display: "block",
+            "&:hover": {
+              backgroundColor: "primary.dark",
+            },
           }}
         >
-          <Button
-            sx={{
-              backgroundColor: "#fc6a03",
-              color: "#fff",
-              width: "90%",
-              margin: "0 auto",
-              "&:hover": {
-                backgroundColor: "#fc6a03",
-              },
-            }}
-          >
-            Checkout
-          </Button>
-        </Typography>
+          Checkout
+        </Button>
       </Box>
     </Drawer>
   );

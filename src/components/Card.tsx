@@ -1,17 +1,18 @@
 import { FC } from "react";
-import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import IconButton from "@mui/material/IconButton";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../features/cartSlice";
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  IconButton,
+  Box,
+  Typography,
+  Rating,
+} from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeFromCart } from "../features/cartSlice";
 import { RootState } from "../store";
-import { useSelector } from "react-redux";
-import { removeFromCart } from "../features/cartSlice";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { Box, Typography } from "@mui/material";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
-import Rating from "@mui/material/Rating";
 import { Book } from "../types/types";
 
 const Card1: FC<Book> = ({
@@ -36,13 +37,13 @@ const Card1: FC<Book> = ({
     <Card
       sx={{
         width: "19%",
-        mb: "10px",
+        mb: 2,
         position: "relative",
-        bgcolor: "#00001a",
-        border: "1px solid rgba(255,255,255, .2)",
-        transition: "0.5s",
+        bgcolor: "secondary.main",
+        border: "1px solid",
+        borderColor: "primary.contrastText",
+        transition: 1,
         "&:hover": {
-          bgcolor: "#000047",
           boxShadow: "0px 0px 20px 0px rgba(134, 134, 171, 1)",
         },
         "&:hover .MuiCardMedia-root": {
@@ -64,7 +65,7 @@ const Card1: FC<Book> = ({
         <Typography
           variant="h6"
           sx={{
-            color: "#fff",
+            color: "text.primary",
             fontSize: "14px",
           }}
         >
@@ -77,7 +78,7 @@ const Card1: FC<Book> = ({
             position: "absolute",
             top: "10px",
             right: "10px",
-            color: "#fc6a03",
+            color: "primary.dark",
             zIndex: 1000,
             padding: 0,
           }}
@@ -91,7 +92,7 @@ const Card1: FC<Book> = ({
             position: "absolute",
             top: "10px",
             right: "10px",
-            color: "#fc6a03",
+            color: "primary.dark",
             zIndex: 1000,
             padding: 0,
           }}
@@ -126,7 +127,7 @@ const Card1: FC<Book> = ({
           sx={{
             fontSize: 16,
             fontWeight: "bold",
-            color: "#fc6a03",
+            color: "primary.dark",
             height: "80px",
             overflow: "hidden",
             textOverflow: "ellipsis",
@@ -136,7 +137,10 @@ const Card1: FC<Book> = ({
           {title} - {author}
         </Typography>
 
-        <Typography variant="h6" sx={{ textAlign: "center", color: "#fff" }}>
+        <Typography
+          variant="h6"
+          sx={{ textAlign: "center", color: "text.primary" }}
+        >
           {price} ₼
         </Typography>
         <Box

@@ -1,8 +1,6 @@
-import { Box } from "@mui/system";
+import { Box, Typography, Button } from "@mui/material";
 import bg from "../assets/img/circle.png";
 import cover from "../assets/img/coverbook.webp";
-import { Typography } from "@mui/material";
-import Button from "@mui/material/Button";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const NewBook = () => {
@@ -20,7 +18,7 @@ const NewBook = () => {
           variant="h3"
           sx={{
             fontFamily: "Comfortaa Bold",
-            color: "var(--orange)",
+            color: "primary.dark",
             display: "inline",
             backgroundImage: `url(${bg})`,
             backgroundRepeat: "no-repeat",
@@ -31,27 +29,28 @@ const NewBook = () => {
         </Typography>
         <Typography
           variant="h3"
-          sx={{ fontFamily: "Comfortaa Bold", color: "var(--orange)" }}
+          sx={{ fontFamily: "Comfortaa Bold", color: "primary.dark" }}
         >
           Recommendation
         </Typography>
         <Typography
           variant="h5"
-          sx={{ fontFamily: "Comfortaa Bold", color: "var(--orange)" }}
+          sx={{ fontFamily: "Comfortaa Bold", color: "primary.dark" }}
         >
           Of The Week
         </Typography>
         <Button
           sx={{
             marginTop: "24px",
-            backgroundColor: "var(--orange)",
+            backgroundColor: "primary.dark",
             padding: "10px 20px",
             borderRadius: "100vmax",
-            border: "1px solid var(--orange)",
+            border: "1px solid",
+            borderColor: "primary.dark",
             color: "white",
             "&:hover": {
               backgroundColor: "transparent",
-              color: "var(--orange)",
+              color: "primary.dark",
             },
           }}
         >

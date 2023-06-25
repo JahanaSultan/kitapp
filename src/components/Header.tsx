@@ -1,5 +1,4 @@
-import { Box, Typography } from '@mui/material'
-import Button from '@mui/material/Button'
+import { Box, Typography, Button,  } from '@mui/material'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import header from '../assets/img/header.webp'
@@ -18,7 +17,7 @@ const Header = () => {
         }}>
             <Box sx={{ flex: 1 }}>
                 <Typography variant="h1" sx={{
-                    color: "#fff",
+                    color: "text.primary",
                     fontFamily: "Comfortaa Bold",
                     fontSize: "4rem",
                     paddingTop: "10%"
@@ -26,7 +25,7 @@ const Header = () => {
                     Get Your New
                 </Typography>
                 <Typography variant="h1" sx={{
-                    color: "#fff",
+                    color: "text.primary",
                     fontFamily: "Comfortaa Bold",
                     fontSize: "4rem",
                     position: "relative",
@@ -35,7 +34,7 @@ const Header = () => {
                         position: "absolute",
                         width: "180px",
                         height: "5px",
-                        backgroundColor: "#fc6a03",
+                        backgroundColor: "primary.dark",
                         bottom: "-10px",
                         left: "0px"
                     }
@@ -43,13 +42,13 @@ const Header = () => {
                     Book Collections
                 </Typography>
                 <Typography variant="h5" sx={{
-                    color: "#fff",
+                    color: "text.primary",
                     mt: "50px"
                 }}>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </Typography>
                 <Typography variant="h5" sx={{
-                    color: "#fff"
+                    color: "text.primary"
                 }}>
                     Quos blanditiis tenetur
                 </Typography>
@@ -59,29 +58,33 @@ const Header = () => {
                     mt: "50px"
                 }}>
                     <Button variant="outlined" sx={{
-                        border: "1px solid #fff",
+                        border: "1px solid",
+                        borderColor: "text.primary",
                         padding: "20px 40px",
-                        color: "#fff",
+                        color: "text.primary",
                         borderRadius: "100vmax",
                         '&:hover': {
-                            backgroundColor: "#fc6a03",
-                            color: "#fff",
-                            border: "1px solid #fc6a03"
+                            backgroundColor: "primary.dark",
+                            color: "text.primary",
+                            border: "1px solid",
+                            borderColor: "primary.dark"
                         }
 
                     }}>Explore More <ShoppingCartIcon sx={{ ml: "20px" }} />
                     </Button>
                     <Button variant="outlined" sx={{
-                        border: "1px solid #fc6a03",
+                        border: "1px solid",
+                        borderColor: "primary.dark",
                         width: "64px", height: "64px",
                         borderRadius: "100vmax",
-                        color: "#fc6a03",
+                        color: "primary.dark",
                         animation: "pulse 2s infinite",
                         ml: "50px",
                         '&:hover': {
-                            backgroundColor: "#fc6a03",
-                            color: "#fff",
-                            border: "1px solid #fc6a03"
+                            backgroundColor: "primary.dark",
+                            color: "text.primary",
+                            border: "1px solid",
+                            borderColor: "primary.dark"
                         }
                     
                     }}

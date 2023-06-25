@@ -19,7 +19,7 @@ const RentBookShelf = () => {
     } catch (error) {
       setError("Error accured while fetching rent books");
     }
-  },[]);
+  }, []);
 
   return (
     <Box
@@ -44,8 +44,8 @@ const RentBookShelf = () => {
         }}
       >
         <SplideTrack>
-          {books.slice(0, 30).map((item: any) => (
-            <SplideSlide>
+          {books.slice(0, 30).map((item: RentProps) => (
+            <SplideSlide key={item.id}>
               <RentBookCard
                 id={item.id}
                 name={item.name}

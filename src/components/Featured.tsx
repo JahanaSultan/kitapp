@@ -1,8 +1,7 @@
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { useEffect, useState } from "react";
 import Card1 from "./Card";
 import Heading from "./Heading";
-import Button from "@mui/material/Button";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import { Book } from "../types/types";
 
@@ -16,7 +15,6 @@ const Featured = () => {
         .then((response) => response.json())
         .then((json) => {
           setData(json);
-          console.log(json);
         });
     } catch (e) {
       setError("An error occurred while fetching books.");
@@ -63,11 +61,13 @@ const Featured = () => {
             margin: "20px auto",
             width: "250px",
             height: "40px",
-            bgcolor: "#fc6a03",
+            bgcolor: "primary.dark",
+            color: "text.primary",
             "&:hover": {
               backgroundColor: "transparent",
-              color: "#fc6a03",
-              border: "1px solid #fc6a03",
+              color: "primary.dark",
+              border: "1px solid",
+              borderColor: "primary.dark",
             },
             "&:hover svg": {
               transform: "translateX(5px)",

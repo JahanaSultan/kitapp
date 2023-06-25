@@ -1,10 +1,12 @@
-import Card from "@mui/material/Card";
-import Typography from "@mui/material/Typography";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
+import {
+  Card,
+  Typography,
+  CardMedia,
+  CardContent,
+  IconButton,
+} from "@mui/material";
 import { FC } from "react";
 import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
-import { IconButton } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { removeFromCart } from "../features/cartSlice";
 import { CartCardProps } from "../types/types";
@@ -16,9 +18,11 @@ const CartCard: FC<CartCardProps> = ({ id, image, title, author, price }) => {
     <Card
       sx={{
         display: "flex",
-        height: 150,
+        height: "150px",
         padding: "10px",
-        border: "1px solid #cccc",
+        borderBottom: "1px solid",
+        borderColor: "primary.light",
+        boxShadow: "none",
         position: "relative",
       }}
     >
@@ -27,7 +31,7 @@ const CartCard: FC<CartCardProps> = ({ id, image, title, author, price }) => {
           position: "absolute",
           top: 5,
           right: 5,
-          color: "red",
+          color: "error.main",
           padding: 0,
         }}
         onClick={() => dispatch(removeFromCart(id))}
@@ -51,27 +55,15 @@ const CartCard: FC<CartCardProps> = ({ id, image, title, author, price }) => {
           sx={{
             fontFamily: "Comfortaa Bold",
             fontSize: "16px",
-            color: "#fc6a03",
+            color: "primary.dark",
           }}
         >
           {title}
         </Typography>
-        <Typography
-          variant="subtitle1"
-          component="div"
-          sx={{
-            fontFamily: "Comfortaa Bold",
-          }}
-        >
+        <Typography variant="subtitle1" component="div" color="primary.main">
           {author}
         </Typography>
-        <Typography
-          variant="subtitle1"
-          component="div"
-          sx={{
-            fontFamily: "Comfortaa Bold",
-          }}
-        >
+        <Typography variant="subtitle1" component="div" color="primary.dark">
           {price}₼
         </Typography>
       </CardContent>

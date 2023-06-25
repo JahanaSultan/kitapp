@@ -1,6 +1,5 @@
-import Dialog from "@mui/material/Dialog";
+import { Dialog, Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import Button from "@mui/material/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { modalClose } from "../features/modalSlice";
 import { RootState } from "../store";
@@ -21,10 +20,10 @@ const Modal = () => {
       <Button
         onClick={() => dispatch(modalClose())}
         sx={{
-          bgcolor: "red",
-          color: "#fff",
+          bgcolor: "error.main",
+          color: "text.primary",
           "&:hover": {
-            bgcolor: "red",
+            bgcolor: "error.dark",
           },
         }}
       >

@@ -1,6 +1,5 @@
-import { Typography } from "@mui/material";
+import { Typography, Box} from "@mui/material";
 import { FC } from "react";
-import { Box } from "@mui/material";
 import { HeadingProps } from "../types/types";
 
 const Heading: FC<HeadingProps> = ({ h1, text }) => {
@@ -10,7 +9,7 @@ const Heading: FC<HeadingProps> = ({ h1, text }) => {
         variant="h4"
         sx={{
           textAlign: "center",
-          color: "#fc6a03",
+          color: "primary.dark",
           fontWeight: "bold",
           fontFamily: "DMSerif",
         }}
@@ -21,7 +20,7 @@ const Heading: FC<HeadingProps> = ({ h1, text }) => {
         variant="h6"
         sx={{
           textAlign: "center",
-          color: "rgba(255,255,255, .5)",
+          color: "primary.light",
           mt: "10px",
           fontFamily: "Comfortaa Bold",
         }}
