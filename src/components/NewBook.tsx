@@ -2,8 +2,13 @@ import { Box, Typography, Button } from "@mui/material";
 import bg from "../assets/img/circle.png";
 import cover from "../assets/img/coverbook.webp";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { useSelector } from "react-redux";
+import { RootState } from "../store";
+
 
 const NewBook = () => {
+  const lang = useSelector((state: RootState) => state.lang.lang);
+
   return (
     <Box
       sx={{
@@ -25,19 +30,19 @@ const NewBook = () => {
             backgroundSize: "contain",
           }}
         >
-          Book
+          {lang.reccomendation.h1}
         </Typography>
         <Typography
           variant="h3"
           sx={{ fontFamily: "Comfortaa Bold", color: "primary.dark" }}
         >
-          Recommendation
+          {lang.reccomendation.h1_2}
         </Typography>
         <Typography
           variant="h5"
           sx={{ fontFamily: "Comfortaa Bold", color: "primary.dark" }}
         >
-          Of The Week
+          {lang.reccomendation.h2}
         </Typography>
         <Button
           sx={{
@@ -54,7 +59,7 @@ const NewBook = () => {
             },
           }}
         >
-          See all recommendations <ArrowForwardIcon />
+          {lang.button.reccomendatiton}<ArrowForwardIcon />
         </Button>
       </Box>
       <Box sx={{ flex: 1 }}>

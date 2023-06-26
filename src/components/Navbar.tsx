@@ -20,6 +20,7 @@ import { toggleSideBar } from "../features/sideBarSlice";
 import Cart from "./Cart";
 import { NavLink } from "react-router-dom";
 import { SelectChangeEvent } from "@mui/material/Select";
+import { langChange } from "../features/langSlice";
 
 const Navbar = () => {
   const cart = useSelector((state: RootState) => state.cart);
@@ -32,10 +33,9 @@ const Navbar = () => {
     window.scrollY > 300 ? setScroll(true) : setScroll(false);
   });
 
-  const [lang, setLang] = useState("en");
-
+  const lang = useSelector((state: RootState) => state.lang);
   const handleChange = (event: SelectChangeEvent) => {
-    setLang(event.target.value);
+   dispatch(langChange(event.target.value));
   };
 
   return (
@@ -82,22 +82,22 @@ const Navbar = () => {
         >
           <NavLink to="/">
             <Typography variant="h6" color="text.primary">
-              Home
+              {lang.lang.home}
             </Typography>
           </NavLink>
           <NavLink to="/">
             <Typography variant="h6" color="text.primary">
-              Blog
+              {lang.lang.blog}
             </Typography>
           </NavLink>
           <NavLink to="/">
             <Typography variant="h6" color="text.primary">
-              Shop
+              {lang.lang.shop}
             </Typography>
           </NavLink>
           <NavLink to="/">
             <Typography variant="h6" color="text.primary">
-              About
+              {lang.lang.contact}
             </Typography>
           </NavLink>
         </Box>
@@ -110,7 +110,7 @@ const Navbar = () => {
         >
           <FormControl sx={{ m: 1, minWidth: 120 }}>
             <Select
-              value={lang}
+              value={lang.langName}
               onChange={handleChange}
               displayEmpty
               inputProps={{ "aria-label": "Without label" }}

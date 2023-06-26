@@ -5,9 +5,12 @@ import header from '../assets/img/header.webp'
 import Modal from './Modal';
 import { useDispatch } from 'react-redux';
 import { modalOpen } from '../features/modalSlice';
+import { useSelector } from 'react-redux';
+import { RootState } from '../store';
 
 const Header = () => {
     const dispatch = useDispatch();
+    const lang = useSelector((state: RootState) => state.lang.lang);
     return (
         <Box sx={{
             width: "100%",
@@ -22,7 +25,7 @@ const Header = () => {
                     fontSize: "4rem",
                     paddingTop: "10%"
                 }}>
-                    Get Your New
+                    {lang.header.h1}
                 </Typography>
                 <Typography variant="h1" sx={{
                     color: "text.primary",
@@ -39,18 +42,18 @@ const Header = () => {
                         left: "0px"
                     }
                 }}>
-                    Book Collections
+                    {lang.header.h1_2}
                 </Typography>
                 <Typography variant="h5" sx={{
                     color: "text.primary",
                     mt: "50px"
                 }}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    {lang.header.p}
                 </Typography>
                 <Typography variant="h5" sx={{
                     color: "text.primary"
                 }}>
-                    Quos blanditiis tenetur
+                    {lang.header.p2}
                 </Typography>
                 <Box sx={{
                     display: "flex",
@@ -70,7 +73,7 @@ const Header = () => {
                             borderColor: "primary.dark"
                         }
 
-                    }}>Explore More <ShoppingCartIcon sx={{ ml: "20px" }} />
+                    }}>{lang.button.explore}<ShoppingCartIcon sx={{ ml: "20px" }} />
                     </Button>
                     <Button variant="outlined" sx={{
                         border: "1px solid",

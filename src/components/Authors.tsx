@@ -5,11 +5,13 @@ import "@splidejs/react-splide/css";
 import { useEffect, useState } from "react";
 import AuthorCard from "./AuthorCard";
 import { Author } from "../types/types";
+import { RootState } from "../store";
+import { useSelector } from "react-redux";
 
 const Authors = () => {
   const [authors, setAuthors] = useState<Author[]>([]);
   const [error, setError] = useState<string | null>(null);
-
+  const lang = useSelector((state: RootState) => state.lang.lang);
   useEffect(() => {
     fetch("http://localhost:3001/authors")
       .then((response) => response.json())
@@ -30,9 +32,9 @@ const Authors = () => {
     >
       egstrtgergerge
       <Heading
-        h1={"Writers Of The Month"}
+        h1={lang.heading.writers_h1}
         text={
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos blanditiis tenetur"
+          lang.heading.writers_p
         }
       />
       {error ? (

@@ -4,11 +4,13 @@ import Card1 from "./Card";
 import Heading from "./Heading";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import { Book } from "../types/types";
+import { useSelector } from "react-redux";
+import { RootState } from "../store";
 
 const Featured = () => {
   const [data, setData] = useState<Book[]>([]);
   const [error, setError] = useState<string | null>(null);
-
+  const lang = useSelector((state: RootState) => state.lang.lang);
   useEffect(() => {
     try {
       fetch("http://localhost:3001/kitab")
@@ -28,9 +30,9 @@ const Featured = () => {
       }}
     >
       <Heading
-        h1={"Featured Collections"}
+        h1={lang.heading.featured_h1}
         text={
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos blanditiis tenetur"
+          lang.heading.featured_p
         }
       />
 
@@ -77,7 +79,7 @@ const Featured = () => {
             },
           }}
         >
-          See More{" "}
+          {lang.button.seemore}
           <ArrowForwardOutlinedIcon sx={{ transition: "transform 0.5s" }} />
         </Button>
     </Box>

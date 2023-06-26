@@ -4,6 +4,7 @@ import { TypedUseSelectorHook, useSelector } from 'react-redux';
 import {modalSlice} from '../features/modalSlice';
 import {cartSlice} from '../features/cartSlice';
 import { sideBarSlice } from '../features/sideBarSlice';
+import { langSlice } from '../features/langSlice';
 
 
 const store = configureStore({
@@ -11,6 +12,7 @@ const store = configureStore({
         modal: modalSlice.reducer,
         cart: cartSlice.reducer,
         sideBar: sideBarSlice.reducer,
+        lang: langSlice.reducer,
     }
 });
 
