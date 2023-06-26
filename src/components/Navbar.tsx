@@ -1,4 +1,12 @@
-import { AppBar, Box, Toolbar, Typography } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  Typography,
+  FormControl,
+  Select,
+  MenuItem,
+} from "@mui/material";
 import logo from "../assets/img/logo.svg";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
@@ -11,6 +19,7 @@ import { useDispatch } from "react-redux";
 import { toggleSideBar } from "../features/sideBarSlice";
 import Cart from "./Cart";
 import { NavLink } from "react-router-dom";
+import { SelectChangeEvent } from "@mui/material/Select";
 
 const Navbar = () => {
   const cart = useSelector((state: RootState) => state.cart);
@@ -22,6 +31,12 @@ const Navbar = () => {
   window.addEventListener("scroll", () => {
     window.scrollY > 300 ? setScroll(true) : setScroll(false);
   });
+
+  const [lang, setLang] = useState("en");
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setLang(event.target.value);
+  };
 
   return (
     <AppBar
@@ -93,14 +108,38 @@ const Navbar = () => {
             justifyContent: "flex-end",
           }}
         >
+          <FormControl sx={{ m: 1, minWidth: 120 }}>
+            <Select
+              value={lang}
+              onChange={handleChange}
+              displayEmpty
+              inputProps={{ "aria-label": "Without label" }}
+              sx={{
+                color: "text.primary",
+                bgcolor: "primary.main",
+                border: "1px solid",
+                borderColor: "primary.contrastText",
+                "& svg": {
+                  fill: "#ffff",
+                },
+              }}
+            >
+              <MenuItem value="az" sx={{ color: "primary.main" }}>
+                AZ
+              </MenuItem>
+              <MenuItem value="en" sx={{ color: "primary.main" }}>
+                EN
+              </MenuItem>
+            </Select>
+          </FormControl>
           <IconButton onClick={() => dispatch(toggleSideBar())}>
             <Badge
               badgeContent={cart.cart.length > 0 ? cart.cart.length : 0}
-              color="secondary"
               max={10}
               sx={{
                 "& .MuiBadge-badge": {
                   color: "text.primary",
+                  bgcolor: "primary.dark",
                 },
               }}
             >
