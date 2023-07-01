@@ -29,7 +29,6 @@ const Authors = () => {
         mb: "50px",
       }}
     >
-      egstrtgergerge
       <Heading
         h1={lang.heading.writers_h1}
         text={

@@ -38,6 +38,7 @@ const Navbar = () => {
  
   const handleChange = (event: SelectChangeEvent) => {
    dispatch(langChange(event.target.value));
+   localStorage.setItem("lang", event.target.value);
   };
 
   return (

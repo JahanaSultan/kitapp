@@ -25,13 +25,16 @@ export const langs = {
             "rent":"Kitab Kirayəsi",
             "rent_p":"Kitab kirayəsi və kitablarınızı rəfə qoyun",
             "blogs":"Bloglar",
-            "blogs_p":"Kitablar haqqında yazılmış blogları oxuyun"
+            "blogs_p":"Kitablar haqqında yazılmış blogları oxuyun",
+            "cart":"Səbət",
+            "total": "Toplam"
         },
         "button":{
             "explore": "Kəşf Et",
             "seemore": "Daha Çox Gör",
             "readmore": "Daha Çox Oxu",
-            "reccomendatiton": "Bütün Təkliflər"
+            "reccomendatiton": "Bütün Təkliflər",
+            "checkout": "Ödəniş Et"
         },
         "reccomendation": {
             "h1": "Kitab",
@@ -63,13 +66,16 @@ export const langs = {
             "rent":"Rent Bookshelf",
             "rent_p":"Rent a bookshelf and put your books on it",
             "blogs":"Blogs",
-            "blogs_p":"Read blogs about books"
+            "blogs_p":"Read blogs about books",
+            "cart":"Cart",
+            "total": "Total"
         },
         "button":{
             "explore": "Explore More",
             "seemore": "See More",
             "readmore": "Read More", 
-            "reccomendatiton": "See All Reccomendations"
+            "reccomendatiton": "See All Reccomendations",
+            "checkout": "Checkout"
         },
         "reccomendation": {
             "h1": "Book",

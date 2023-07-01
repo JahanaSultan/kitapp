@@ -6,7 +6,8 @@ export interface langState {
     langName: string;
 }
 
-const initialState: langState = { lang: langs.en , langName: 'en' }
+const l = localStorage.getItem('lang') || 'az';
+const initialState: langState = {langName: l, lang: l === "az" ? langs.az : langs.en}
 
 export const langSlice = createSlice({
     name: 'lang',

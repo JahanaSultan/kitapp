@@ -3,9 +3,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../store";
 import CartCard from "./CartCard";
 import { toggleSideBar } from "../features/sideBarSlice";
+import { useContext } from "react";
+import LangContext from "../lang/langContext";
 
 const Cart = () => {
   const dispatch = useDispatch();
+  const lang = useContext(LangContext);
   const cart = useSelector((state: RootState) => state.cart);
   const sideBar = useSelector((state: RootState) => state.sideBar);
   return (
@@ -37,7 +40,7 @@ const Cart = () => {
             color: "primary.main",
           }}
         >
-          Cart
+          {lang.heading.cart}
         </Typography>
         {cart.cart.map((item) => (
           <CartCard
@@ -60,7 +63,7 @@ const Cart = () => {
             color: "primary.main",
           }}
         >
-          Total: {cart.totalPrice}₼
+          {lang.heading.total}: {cart.totalPrice}₼
         </Typography>
         <Button
           sx={{
@@ -74,7 +77,7 @@ const Cart = () => {
             },
           }}
         >
-          Checkout
+          {lang.button.checkout}
         </Button>
       </Box>
     </Drawer>
