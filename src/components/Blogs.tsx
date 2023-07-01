@@ -2,12 +2,14 @@ import Heading from "./Heading";
 import { Box, Button } from "@mui/material";
 import BlogCard from "./BlogCard";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { BlogProps } from "../types/types";
+import LangContext from "../lang/langContext";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState<BlogProps[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const lang = useContext(LangContext);
 
   useEffect(() => {
     try {
@@ -28,8 +30,8 @@ const Blogs = () => {
       }}
     >
       <Heading
-        h1="Blogs"
-        text="Read our blogs to get more information about our services and products."
+        h1={lang.heading.blogs}
+        text={lang.heading.blogs_p}
       />
       <Box
         sx={{
@@ -65,7 +67,7 @@ const Blogs = () => {
             },
           }}
         >
-          See More
+          {lang.button.seemore}
           <ArrowForwardOutlinedIcon sx={{ transition: "transform 0.5s" }} />
         </Button>
       </Box>

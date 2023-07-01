@@ -2,16 +2,15 @@ import { Box, Typography } from "@mui/material";
 import Heading from "./Heading";
 import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import AuthorCard from "./AuthorCard";
 import { Author } from "../types/types";
-import { RootState } from "../store";
-import { useSelector } from "react-redux";
+import LangContext from "../lang/langContext";
 
 const Authors = () => {
   const [authors, setAuthors] = useState<Author[]>([]);
   const [error, setError] = useState<string | null>(null);
-  const lang = useSelector((state: RootState) => state.lang.lang);
+  const lang = useContext(LangContext);
   useEffect(() => {
     fetch("http://localhost:3001/authors")
       .then((response) => response.json())

@@ -4,13 +4,13 @@ import Card1 from "./Card";
 import Heading from "./Heading";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import { Book } from "../types/types";
-import { useSelector } from "react-redux";
-import { RootState } from "../store";
+import { useContext } from "react";
+import LangContext from "../lang/langContext";
 
 const Featured = () => {
   const [data, setData] = useState<Book[]>([]);
   const [error, setError] = useState<string | null>(null);
-  const lang = useSelector((state: RootState) => state.lang.lang);
+  const lang = useContext(LangContext);
   useEffect(() => {
     try {
       fetch("http://localhost:3001/kitab")

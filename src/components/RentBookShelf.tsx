@@ -2,13 +2,14 @@ import { Box } from "@mui/material";
 import Heading from "./Heading";
 import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide";
 import RentBookCard from "./RentBookCard";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { RentProps } from "../types/types";
+import LangContext from "../lang/langContext";
 
 const RentBookShelf = () => {
   const [books, setBooks] = useState<RentProps[]>([]);
   const [error, setError] = useState<string | null>(null);
-
+  const lang = useContext(LangContext);
   useEffect(() => {
     try {
       fetch("http://localhost:3001/rentbook")
@@ -28,8 +29,8 @@ const RentBookShelf = () => {
       }}
     >
       <Heading
-        h1="Rent Book Shelf"
-        text="Affordable prices and free return shipping at the end of the rental period."
+        h1={lang.heading.rent}
+        text={lang.heading.rent_p}
       />
 
       <Splide

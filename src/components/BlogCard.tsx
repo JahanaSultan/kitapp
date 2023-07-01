@@ -3,7 +3,6 @@ import {
   Card,
   CardMedia,
   CardContent,
-  IconButton,
 } from "@mui/material";
 import { BlogProps } from "../types/types";
 import { FC } from "react";

@@ -23,7 +23,9 @@ export const langs = {
             "writers_h1": "Ayın Yazarları",
             "writers_p": "Ayın yazarlarını kəşf edin",
             "rent":"Kitab Kirayəsi",
-            "rent_p":"Kitab kirayəsi və kitablarınızı rəfə qoyun"
+            "rent_p":"Kitab kirayəsi və kitablarınızı rəfə qoyun",
+            "blogs":"Bloglar",
+            "blogs_p":"Kitablar haqqında yazılmış blogları oxuyun"
         },
         "button":{
             "explore": "Kəşf Et",
@@ -59,7 +61,9 @@ export const langs = {
             "writers_h1": "Writers of the Month",
             "writers_p": "Explore writers of the month",
             "rent":"Rent Bookshelf",
-            "rent_p":"Rent a bookshelf and put your books on it"
+            "rent_p":"Rent a bookshelf and put your books on it",
+            "blogs":"Blogs",
+            "blogs_p":"Read blogs about books"
         },
         "button":{
             "explore": "Explore More",

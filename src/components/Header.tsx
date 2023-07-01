@@ -5,12 +5,13 @@ import header from '../assets/img/header.webp'
 import Modal from './Modal';
 import { useDispatch } from 'react-redux';
 import { modalOpen } from '../features/modalSlice';
-import { useSelector } from 'react-redux';
-import { RootState } from '../store';
+import { useContext } from "react";
+import LangContext from "../lang/langContext";
 
 const Header = () => {
     const dispatch = useDispatch();
-    const lang = useSelector((state: RootState) => state.lang.lang);
+    const lang = useContext(LangContext);
+    
     return (
         <Box sx={{
             width: "100%",

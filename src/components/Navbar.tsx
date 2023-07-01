@@ -21,11 +21,13 @@ import Cart from "./Cart";
 import { NavLink } from "react-router-dom";
 import { SelectChangeEvent } from "@mui/material/Select";
 import { langChange } from "../features/langSlice";
-
+import { useContext } from "react";
+import LangContext from "../lang/langContext";
 const Navbar = () => {
+  const lang = useContext(LangContext);
   const cart = useSelector((state: RootState) => state.cart);
   const dispatch = useDispatch();
-
+  const language = useSelector((state: RootState) => state.lang);
   //sticky navbar
   const [scroll, setScroll] = useState<boolean>(false);
 
@@ -33,7 +35,7 @@ const Navbar = () => {
     window.scrollY > 300 ? setScroll(true) : setScroll(false);
   });
 
-  const lang = useSelector((state: RootState) => state.lang);
+ 
   const handleChange = (event: SelectChangeEvent) => {
    dispatch(langChange(event.target.value));
   };
@@ -82,22 +84,22 @@ const Navbar = () => {
         >
           <NavLink to="/">
             <Typography variant="h6" color="text.primary">
-              {lang.lang.home}
+              {lang.home}
             </Typography>
           </NavLink>
           <NavLink to="/">
             <Typography variant="h6" color="text.primary">
-              {lang.lang.blog}
+              {lang.blog}
             </Typography>
           </NavLink>
           <NavLink to="/">
             <Typography variant="h6" color="text.primary">
-              {lang.lang.shop}
+              {lang.shop}
             </Typography>
           </NavLink>
           <NavLink to="/">
             <Typography variant="h6" color="text.primary">
-              {lang.lang.contact}
+              {lang.contact}
             </Typography>
           </NavLink>
         </Box>
@@ -110,7 +112,7 @@ const Navbar = () => {
         >
           <FormControl sx={{ m: 1, minWidth: 120 }}>
             <Select
-              value={lang.langName}
+              value={language.langName}
               onChange={handleChange}
               displayEmpty
               inputProps={{ "aria-label": "Without label" }}

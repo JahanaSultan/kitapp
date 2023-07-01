@@ -2,12 +2,12 @@ import { Box, Typography, Button } from "@mui/material";
 import bg from "../assets/img/circle.png";
 import cover from "../assets/img/coverbook.webp";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { useSelector } from "react-redux";
-import { RootState } from "../store";
+import { useContext } from "react";
+import LangContext from "../lang/langContext";
 
 
 const NewBook = () => {
-  const lang = useSelector((state: RootState) => state.lang.lang);
+  const lang = useContext(LangContext);
 
   return (
     <Box
