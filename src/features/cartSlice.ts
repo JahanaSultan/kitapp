@@ -28,7 +28,8 @@ export const cartSlice = createSlice({
         },
         removeFromCart: (state, action) => {
             state.cart = state.cart.filter((x) => x.id !== action.payload);
-            state.totalPrice = state.cart.reduce((acc, item) => acc + item.price, 0);
+            const totalPrice = state.cart.reduce((acc, item) => acc + item.price, 0);
+            state.totalPrice = parseFloat(totalPrice.toFixed(2));
         }
     }
 })
